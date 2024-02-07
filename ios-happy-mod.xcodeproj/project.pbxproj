@@ -9,23 +9,61 @@
 /* Begin PBXBuildFile section */
 		DAA0CFFA2B715A9B002E3397 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0CFF92B715A9B002E3397 /* AppDelegate.swift */; };
 		DAA0CFFC2B715A9B002E3397 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0CFFB2B715A9B002E3397 /* SceneDelegate.swift */; };
-		DAA0CFFE2B715A9B002E3397 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0CFFD2B715A9B002E3397 /* ViewController.swift */; };
-		DAA0D0012B715A9B002E3397 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAA0CFFF2B715A9B002E3397 /* Main.storyboard */; };
 		DAA0D0042B715A9B002E3397 /* ios_happy_mod.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D0022B715A9B002E3397 /* ios_happy_mod.xcdatamodeld */; };
 		DAA0D0062B715A9C002E3397 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAA0D0052B715A9C002E3397 /* Assets.xcassets */; };
 		DAA0D0092B715A9C002E3397 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAA0D0072B715A9C002E3397 /* LaunchScreen.storyboard */; };
+		DAA0D0172B715D1B002E3397 /* CXC_GamesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D0152B715D1B002E3397 /* CXC_GamesListViewController.swift */; };
+		DAA0D0182B715D1B002E3397 /* CXC_GamesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAA0D0162B715D1B002E3397 /* CXC_GamesListViewController.xib */; };
+		DAA0D01A2B715DA7002E3397 /* CXC_GamesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D0192B715DA7002E3397 /* CXC_GamesListPresenter.swift */; };
+		DAA0D01D2B716001002E3397 /* CXC_Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D01C2B716001002E3397 /* CXC_Navigator.swift */; };
+		DAA0D01F2B71603A002E3397 /* CXC_Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D01E2B71603A002E3397 /* CXC_Assembler.swift */; };
+		DAA0D0232B716A00002E3397 /* CXC_GamesListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D0212B716A00002E3397 /* CXC_GamesListTableViewCell.swift */; };
+		DAA0D0242B716A00002E3397 /* CXC_GamesListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAA0D0222B716A00002E3397 /* CXC_GamesListTableViewCell.xib */; };
+		DAA0D0292B71824F002E3397 /* CXC_UINavBarAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D0282B71824F002E3397 /* CXC_UINavBarAppearance.swift */; };
+		DAA0D0342B7198A0002E3397 /* CXC_ModsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D0322B7198A0002E3397 /* CXC_ModsVC.swift */; };
+		DAA0D0352B7198A0002E3397 /* CXC_ModsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAA0D0332B7198A0002E3397 /* CXC_ModsVC.xib */; };
+		DAA0D0372B7198BF002E3397 /* CXC_ModsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D0362B7198BF002E3397 /* CXC_ModsPresenter.swift */; };
+		DAA0D03B2B71B384002E3397 /* CXC_ModCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D0392B71B384002E3397 /* CXC_ModCell.swift */; };
+		DAA0D03C2B71B384002E3397 /* CXC_ModCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAA0D03A2B71B384002E3397 /* CXC_ModCell.xib */; };
+		DACB9C122B72D2AE00D2B02D /* Inter-VariableFont_slnt,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DACB9C112B72D2AE00D2B02D /* Inter-VariableFont_slnt,wght.ttf */; };
+		DACB9C152B72E55900D2B02D /* CXC_ScreenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACB9C142B72E55900D2B02D /* CXC_ScreenType.swift */; };
+		DACB9C1A2B73569800D2B02D /* CXC_DetailedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACB9C182B73569800D2B02D /* CXC_DetailedVC.swift */; };
+		DACB9C1B2B73569800D2B02D /* CXC_DetailedVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DACB9C192B73569800D2B02D /* CXC_DetailedVC.xib */; };
+		DACB9C1D2B7356CA00D2B02D /* CXC_DetailedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACB9C1C2B7356CA00D2B02D /* CXC_DetailedPresenter.swift */; };
+		DACB9C212B73606400D2B02D /* CXC_MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACB9C1F2B73606400D2B02D /* CXC_MenuVC.swift */; };
+		DACB9C222B73606400D2B02D /* CXC_MenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DACB9C202B73606400D2B02D /* CXC_MenuVC.xib */; };
+		DACB9C242B73607D00D2B02D /* CXC_MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACB9C232B73607D00D2B02D /* CXC_MenuPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DAA0CFF62B715A9B002E3397 /* ios-happy-mod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-happy-mod.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA0CFF92B715A9B002E3397 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAA0CFFB2B715A9B002E3397 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DAA0CFFD2B715A9B002E3397 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DAA0D0002B715A9B002E3397 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DAA0D0032B715A9B002E3397 /* ios_happy_mod.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ios_happy_mod.xcdatamodel; sourceTree = "<group>"; };
 		DAA0D0052B715A9C002E3397 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAA0D0082B715A9C002E3397 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAA0D00A2B715A9C002E3397 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAA0D0152B715D1B002E3397 /* CXC_GamesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXC_GamesListViewController.swift; sourceTree = "<group>"; };
+		DAA0D0162B715D1B002E3397 /* CXC_GamesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CXC_GamesListViewController.xib; sourceTree = "<group>"; };
+		DAA0D0192B715DA7002E3397 /* CXC_GamesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXC_GamesListPresenter.swift; sourceTree = "<group>"; };
+		DAA0D01C2B716001002E3397 /* CXC_Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXC_Navigator.swift; sourceTree = "<group>"; };
+		DAA0D01E2B71603A002E3397 /* CXC_Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXC_Assembler.swift; sourceTree = "<group>"; };
+		DAA0D0212B716A00002E3397 /* CXC_GamesListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXC_GamesListTableViewCell.swift; sourceTree = "<group>"; };
+		DAA0D0222B716A00002E3397 /* CXC_GamesListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CXC_GamesListTableViewCell.xib; sourceTree = "<group>"; };
+		DAA0D0282B71824F002E3397 /* CXC_UINavBarAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXC_UINavBarAppearance.swift; sourceTree = "<group>"; };
+		DAA0D0322B7198A0002E3397 /* CXC_ModsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXC_ModsVC.swift; sourceTree = "<group>"; };
+		DAA0D0332B7198A0002E3397 /* CXC_ModsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CXC_ModsVC.xib; sourceTree = "<group>"; };
+		DAA0D0362B7198BF002E3397 /* CXC_ModsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXC_ModsPresenter.swift; sourceTree = "<group>"; };
+		DAA0D0392B71B384002E3397 /* CXC_ModCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXC_ModCell.swift; sourceTree = "<group>"; };
+		DAA0D03A2B71B384002E3397 /* CXC_ModCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CXC_ModCell.xib; sourceTree = "<group>"; };
+		DACB9C112B72D2AE00D2B02D /* Inter-VariableFont_slnt,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-VariableFont_slnt,wght.ttf"; sourceTree = "<group>"; };
+		DACB9C142B72E55900D2B02D /* CXC_ScreenType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXC_ScreenType.swift; sourceTree = "<group>"; };
+		DACB9C182B73569800D2B02D /* CXC_DetailedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXC_DetailedVC.swift; sourceTree = "<group>"; };
+		DACB9C192B73569800D2B02D /* CXC_DetailedVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CXC_DetailedVC.xib; sourceTree = "<group>"; };
+		DACB9C1C2B7356CA00D2B02D /* CXC_DetailedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXC_DetailedPresenter.swift; sourceTree = "<group>"; };
+		DACB9C1F2B73606400D2B02D /* CXC_MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXC_MenuVC.swift; sourceTree = "<group>"; };
+		DACB9C202B73606400D2B02D /* CXC_MenuVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CXC_MenuVC.xib; sourceTree = "<group>"; };
+		DACB9C232B73607D00D2B02D /* CXC_MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXC_MenuPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +96,147 @@
 		DAA0CFF82B715A9B002E3397 /* ios-happy-mod */ = {
 			isa = PBXGroup;
 			children = (
-				DAA0CFF92B715A9B002E3397 /* AppDelegate.swift */,
-				DAA0CFFB2B715A9B002E3397 /* SceneDelegate.swift */,
-				DAA0CFFD2B715A9B002E3397 /* ViewController.swift */,
-				DAA0CFFF2B715A9B002E3397 /* Main.storyboard */,
-				DAA0D0052B715A9C002E3397 /* Assets.xcassets */,
+				DACB9C132B72E4E700D2B02D /* CXC_Model */,
+				DACB9C102B72D23200D2B02D /* CXC_Fonts */,
+				DAA0D0252B717732002E3397 /* CXC_Extension */,
+				DAA0D01B2B715F5B002E3397 /* CXC_Navigator */,
+				DAA0D0132B715C93002E3397 /* CXC_Screens */,
+				DAA0D0122B715C5E002E3397 /* CXC_DropBoxManager */,
+				DAA0D0112B715B25002E3397 /* CXC_Source */,
+				DAA0D0102B715B22002E3397 /* CXC_Support */,
 				DAA0D0072B715A9C002E3397 /* LaunchScreen.storyboard */,
-				DAA0D00A2B715A9C002E3397 /* Info.plist */,
 				DAA0D0022B715A9B002E3397 /* ios_happy_mod.xcdatamodeld */,
 			);
 			path = "ios-happy-mod";
+			sourceTree = "<group>";
+		};
+		DAA0D0102B715B22002E3397 /* CXC_Support */ = {
+			isa = PBXGroup;
+			children = (
+				DAA0D00A2B715A9C002E3397 /* Info.plist */,
+				DAA0CFFB2B715A9B002E3397 /* SceneDelegate.swift */,
+				DAA0CFF92B715A9B002E3397 /* AppDelegate.swift */,
+			);
+			path = CXC_Support;
+			sourceTree = "<group>";
+		};
+		DAA0D0112B715B25002E3397 /* CXC_Source */ = {
+			isa = PBXGroup;
+			children = (
+				DAA0D0052B715A9C002E3397 /* Assets.xcassets */,
+			);
+			path = CXC_Source;
+			sourceTree = "<group>";
+		};
+		DAA0D0122B715C5E002E3397 /* CXC_DropBoxManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CXC_DropBoxManager;
+			sourceTree = "<group>";
+		};
+		DAA0D0132B715C93002E3397 /* CXC_Screens */ = {
+			isa = PBXGroup;
+			children = (
+				DACB9C1E2B73604800D2B02D /* CXC_MenuVC */,
+				DACB9C172B73564300D2B02D /* CXC_DetailedVC */,
+				DAA0D0312B719879002E3397 /* CXC_ModsVC */,
+				DAA0D0142B715CA8002E3397 /* CXC_GamesList */,
+			);
+			path = CXC_Screens;
+			sourceTree = "<group>";
+		};
+		DAA0D0142B715CA8002E3397 /* CXC_GamesList */ = {
+			isa = PBXGroup;
+			children = (
+				DAA0D0202B7169BB002E3397 /* CXC_Cell */,
+				DAA0D0152B715D1B002E3397 /* CXC_GamesListViewController.swift */,
+				DAA0D0162B715D1B002E3397 /* CXC_GamesListViewController.xib */,
+				DAA0D0192B715DA7002E3397 /* CXC_GamesListPresenter.swift */,
+			);
+			path = CXC_GamesList;
+			sourceTree = "<group>";
+		};
+		DAA0D01B2B715F5B002E3397 /* CXC_Navigator */ = {
+			isa = PBXGroup;
+			children = (
+				DAA0D01C2B716001002E3397 /* CXC_Navigator.swift */,
+				DAA0D01E2B71603A002E3397 /* CXC_Assembler.swift */,
+			);
+			path = CXC_Navigator;
+			sourceTree = "<group>";
+		};
+		DAA0D0202B7169BB002E3397 /* CXC_Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DAA0D0212B716A00002E3397 /* CXC_GamesListTableViewCell.swift */,
+				DAA0D0222B716A00002E3397 /* CXC_GamesListTableViewCell.xib */,
+			);
+			path = CXC_Cell;
+			sourceTree = "<group>";
+		};
+		DAA0D0252B717732002E3397 /* CXC_Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DAA0D0282B71824F002E3397 /* CXC_UINavBarAppearance.swift */,
+			);
+			path = CXC_Extension;
+			sourceTree = "<group>";
+		};
+		DAA0D0312B719879002E3397 /* CXC_ModsVC */ = {
+			isa = PBXGroup;
+			children = (
+				DAA0D0382B71B346002E3397 /* CXC_ModCell */,
+				DAA0D0322B7198A0002E3397 /* CXC_ModsVC.swift */,
+				DAA0D0332B7198A0002E3397 /* CXC_ModsVC.xib */,
+				DAA0D0362B7198BF002E3397 /* CXC_ModsPresenter.swift */,
+			);
+			path = CXC_ModsVC;
+			sourceTree = "<group>";
+		};
+		DAA0D0382B71B346002E3397 /* CXC_ModCell */ = {
+			isa = PBXGroup;
+			children = (
+				DAA0D0392B71B384002E3397 /* CXC_ModCell.swift */,
+				DAA0D03A2B71B384002E3397 /* CXC_ModCell.xib */,
+			);
+			path = CXC_ModCell;
+			sourceTree = "<group>";
+		};
+		DACB9C102B72D23200D2B02D /* CXC_Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				DACB9C112B72D2AE00D2B02D /* Inter-VariableFont_slnt,wght.ttf */,
+			);
+			path = CXC_Fonts;
+			sourceTree = "<group>";
+		};
+		DACB9C132B72E4E700D2B02D /* CXC_Model */ = {
+			isa = PBXGroup;
+			children = (
+				DACB9C142B72E55900D2B02D /* CXC_ScreenType.swift */,
+			);
+			path = CXC_Model;
+			sourceTree = "<group>";
+		};
+		DACB9C172B73564300D2B02D /* CXC_DetailedVC */ = {
+			isa = PBXGroup;
+			children = (
+				DACB9C182B73569800D2B02D /* CXC_DetailedVC.swift */,
+				DACB9C192B73569800D2B02D /* CXC_DetailedVC.xib */,
+				DACB9C1C2B7356CA00D2B02D /* CXC_DetailedPresenter.swift */,
+			);
+			path = CXC_DetailedVC;
+			sourceTree = "<group>";
+		};
+		DACB9C1E2B73604800D2B02D /* CXC_MenuVC */ = {
+			isa = PBXGroup;
+			children = (
+				DACB9C1F2B73606400D2B02D /* CXC_MenuVC.swift */,
+				DACB9C202B73606400D2B02D /* CXC_MenuVC.xib */,
+				DACB9C232B73607D00D2B02D /* CXC_MenuPresenter.swift */,
+			);
+			path = CXC_MenuVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,9 +297,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAA0D03C2B71B384002E3397 /* CXC_ModCell.xib in Resources */,
+				DAA0D0352B7198A0002E3397 /* CXC_ModsVC.xib in Resources */,
+				DAA0D0242B716A00002E3397 /* CXC_GamesListTableViewCell.xib in Resources */,
+				DAA0D0182B715D1B002E3397 /* CXC_GamesListViewController.xib in Resources */,
+				DACB9C122B72D2AE00D2B02D /* Inter-VariableFont_slnt,wght.ttf in Resources */,
+				DACB9C1B2B73569800D2B02D /* CXC_DetailedVC.xib in Resources */,
 				DAA0D0092B715A9C002E3397 /* LaunchScreen.storyboard in Resources */,
 				DAA0D0062B715A9C002E3397 /* Assets.xcassets in Resources */,
-				DAA0D0012B715A9B002E3397 /* Main.storyboard in Resources */,
+				DACB9C222B73606400D2B02D /* CXC_MenuVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,9 +316,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAA0CFFE2B715A9B002E3397 /* ViewController.swift in Sources */,
+				DACB9C152B72E55900D2B02D /* CXC_ScreenType.swift in Sources */,
+				DAA0D0232B716A00002E3397 /* CXC_GamesListTableViewCell.swift in Sources */,
+				DAA0D0292B71824F002E3397 /* CXC_UINavBarAppearance.swift in Sources */,
+				DAA0D01D2B716001002E3397 /* CXC_Navigator.swift in Sources */,
+				DAA0D03B2B71B384002E3397 /* CXC_ModCell.swift in Sources */,
+				DACB9C1A2B73569800D2B02D /* CXC_DetailedVC.swift in Sources */,
+				DACB9C212B73606400D2B02D /* CXC_MenuVC.swift in Sources */,
+				DACB9C1D2B7356CA00D2B02D /* CXC_DetailedPresenter.swift in Sources */,
 				DAA0D0042B715A9B002E3397 /* ios_happy_mod.xcdatamodeld in Sources */,
+				DAA0D01F2B71603A002E3397 /* CXC_Assembler.swift in Sources */,
 				DAA0CFFA2B715A9B002E3397 /* AppDelegate.swift in Sources */,
+				DAA0D0172B715D1B002E3397 /* CXC_GamesListViewController.swift in Sources */,
+				DAA0D0372B7198BF002E3397 /* CXC_ModsPresenter.swift in Sources */,
+				DACB9C242B73607D00D2B02D /* CXC_MenuPresenter.swift in Sources */,
+				DAA0D0342B7198A0002E3397 /* CXC_ModsVC.swift in Sources */,
+				DAA0D01A2B715DA7002E3397 /* CXC_GamesListPresenter.swift in Sources */,
 				DAA0CFFC2B715A9B002E3397 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,14 +339,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DAA0CFFF2B715A9B002E3397 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DAA0D0002B715A9B002E3397 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DAA0D0072B715A9C002E3397 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -298,10 +478,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U2226ARBD7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "ios-happy-mod/Info.plist";
+				INFOPLIST_FILE = "ios-happy-mod/CXC_Support/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -326,10 +505,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U2226ARBD7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "ios-happy-mod/Info.plist";
+				INFOPLIST_FILE = "ios-happy-mod/CXC_Support/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

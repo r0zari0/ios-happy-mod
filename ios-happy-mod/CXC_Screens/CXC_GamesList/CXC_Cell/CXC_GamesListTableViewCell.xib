@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="KGk-i7-Jjw" customClass="CXC_GamesListTableViewCell" customModule="ios_happy_mod" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="413" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="413" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Hq-CA-i2q">
+                        <rect key="frame" x="6" y="3" width="350" height="48"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSY-4l-Vcu">
+                                <rect key="frame" x="320" y="12" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="8Ex-Dg-g9L"/>
+                                    <constraint firstAttribute="height" constant="24" id="xzd-yp-aOP"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="Arrow"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0h-u2-okM">
+                                <rect key="frame" x="6" y="13.999999999999998" width="308" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="GreenColor"/>
+                        <constraints>
+                            <constraint firstItem="cSY-4l-Vcu" firstAttribute="leading" secondItem="t0h-u2-okM" secondAttribute="trailing" constant="6" id="71H-Lv-Ebf"/>
+                            <constraint firstAttribute="width" constant="350" id="VAx-pX-ewz"/>
+                            <constraint firstItem="t0h-u2-okM" firstAttribute="leading" secondItem="9Hq-CA-i2q" secondAttribute="leading" constant="6" id="ac2-Yn-YeC"/>
+                            <constraint firstItem="cSY-4l-Vcu" firstAttribute="centerY" secondItem="t0h-u2-okM" secondAttribute="centerY" id="e05-e0-Ren"/>
+                            <constraint firstAttribute="height" constant="48" id="ktw-Ed-DWs"/>
+                            <constraint firstAttribute="trailing" secondItem="cSY-4l-Vcu" secondAttribute="trailing" constant="6" id="ngJ-qb-ik9"/>
+                            <constraint firstItem="t0h-u2-okM" firstAttribute="centerY" secondItem="9Hq-CA-i2q" secondAttribute="centerY" id="uU7-95-4Q0"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="9Hq-CA-i2q" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="Poo-DU-pIa"/>
+                    <constraint firstAttribute="bottom" secondItem="9Hq-CA-i2q" secondAttribute="bottom" constant="3" id="oD1-1f-qq2"/>
+                    <constraint firstItem="9Hq-CA-i2q" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="6" id="pBV-5B-drT"/>
+                    <constraint firstAttribute="trailing" secondItem="9Hq-CA-i2q" secondAttribute="trailing" constant="6" id="s0W-p0-b6H"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="CXC_ArrowImage" destination="cSY-4l-Vcu" id="yaW-JC-Y1K"/>
+                <outlet property="CXC_Label" destination="t0h-u2-okM" id="vAS-Fd-zND"/>
+                <outlet property="CXC_MyView" destination="9Hq-CA-i2q" id="xg8-Q3-fvp"/>
+            </connections>
+            <point key="canvasLocation" x="179.38931297709922" y="32.394366197183103"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Arrow" width="10" height="16"/>
+        <namedColor name="GreenColor">
+            <color red="0.45234030485153198" green="0.84252512454986572" blue="0.52232950925827026" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
