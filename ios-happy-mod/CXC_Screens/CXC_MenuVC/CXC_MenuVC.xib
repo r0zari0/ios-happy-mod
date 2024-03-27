@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-VariableFont_slnt,wght.ttf">
+            <string>Inter-Regular_Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CXC_MenuVC" customModule="ios_happy_mod" customModuleProvider="target">
+            <connections>
+                <outlet property="CXC_AppsButton" destination="lr0-Sl-R2g" id="7iw-Ie-R73"/>
+                <outlet property="CXC_FavoritesButton" destination="o7b-ej-ZDW" id="J8L-Ws-6HU"/>
+                <outlet property="CXC_GamesButton" destination="5jL-r3-gyP" id="SSx-6g-NqS"/>
+                <outlet property="CXC_MenuLabel" destination="aWZ-q9-Trw" id="nab-by-XrL"/>
+                <outlet property="CXC_TopicsButton" destination="7Ga-dM-SuK" id="bsa-D6-6wY"/>
+                <outlet property="CXC_XButton" destination="jIj-Lo-Rgd" id="4fH-17-HnV"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Ozf-gF-B28">
+                    <rect key="frame" x="20" y="290.66666666666669" width="353" height="296.00000000000006"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jL-r3-gyP">
+                            <rect key="frame" x="1.6666666666666572" y="0.0" width="350" height="56"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="56" id="71k-ZF-h3u"/>
+                                <constraint firstAttribute="width" constant="350" id="FYM-2I-CGD"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Games">
+                                <fontDescription key="titleFontDescription" name="Inter-Regular_SemiBold" family="Inter" pointSize="20"/>
+                                <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="CXC_GamesButtonAction:" destination="-1" eventType="touchUpInside" id="NNh-uV-eAF"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lr0-Sl-R2g">
+                            <rect key="frame" x="1.6666666666666572" y="80" width="350" height="56"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="350" id="CnI-gV-1su"/>
+                                <constraint firstAttribute="height" constant="56" id="W8m-QQ-gY9"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Apps">
+                                <fontDescription key="titleFontDescription" name="Inter-Regular_SemiBold" family="Inter" pointSize="20"/>
+                                <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="CXC_AppsButtonAction:" destination="-1" eventType="touchUpInside" id="gYQ-OI-eBT"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ga-dM-SuK">
+                            <rect key="frame" x="1.6666666666666572" y="160" width="350" height="56"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="350" id="AOT-qN-OhD"/>
+                                <constraint firstAttribute="height" constant="56" id="jAq-EX-Qqg"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Topics">
+                                <fontDescription key="titleFontDescription" name="Inter-Regular_SemiBold" family="Inter" pointSize="20"/>
+                                <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="CXC_TopicsButtonAction:" destination="-1" eventType="touchUpInside" id="TOk-1r-nX8"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7b-ej-ZDW">
+                            <rect key="frame" x="1.6666666666666572" y="239.99999999999994" width="350" height="56"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="56" id="348-m9-W2y"/>
+                                <constraint firstAttribute="width" constant="350" id="RJL-uC-1VR"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Favorites">
+                                <fontDescription key="titleFontDescription" name="Inter-Regular_SemiBold" family="Inter" pointSize="20"/>
+                                <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="CXC_FavoritesButtonAction:" destination="-1" eventType="touchUpInside" id="mqN-st-Jz4"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWZ-q9-Trw">
+                    <rect key="frame" x="166.33333333333334" y="87" width="60.666666666666657" height="28"/>
+                    <fontDescription key="fontDescription" name="Inter-Regular_Bold" family="Inter" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIj-Lo-Rgd">
+                    <rect key="frame" x="329" y="79" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="gwL-qF-Mbf"/>
+                        <constraint firstAttribute="width" constant="44" id="znx-FL-wPd"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" image="x">
+                        <backgroundConfiguration key="background" cornerRadius="16"/>
+                        <color key="baseBackgroundColor" name="GreenColor"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="CXC_XActionButton:" destination="-1" eventType="touchUpInside" id="jMs-Ak-TiH"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ozf-gF-B28" secondAttribute="trailing" constant="20" id="85G-t0-9kK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jIj-Lo-Rgd" secondAttribute="trailing" constant="20" id="FPn-5e-Spx"/>
+                <constraint firstItem="aWZ-q9-Trw" firstAttribute="centerX" secondItem="5jL-r3-gyP" secondAttribute="centerX" id="Jev-Je-XdZ"/>
+                <constraint firstItem="aWZ-q9-Trw" firstAttribute="centerY" secondItem="jIj-Lo-Rgd" secondAttribute="centerY" id="OuM-lt-Yaq"/>
+                <constraint firstItem="jIj-Lo-Rgd" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="eR6-Fx-8wD"/>
+                <constraint firstItem="Ozf-gF-B28" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="eSG-yV-6DW"/>
+                <constraint firstItem="Ozf-gF-B28" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="ozn-YT-tTf"/>
+            </constraints>
+            <point key="canvasLocation" x="138" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="x" width="14" height="14"/>
+        <namedColor name="GreenColor">
+            <color red="0.41999998688697815" green="0.70999997854232788" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

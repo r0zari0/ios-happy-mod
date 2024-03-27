@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22522" systemVersion="23D60" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ArtDesignModelCD" representedClassName="ArtDesignModelCD" syncable="YES">
+        <attribute name="artDescription" optional="YES" attributeType="String"/>
+        <attribute name="artFilePath" optional="YES" attributeType="String"/>
+        <attribute name="artImage" optional="YES" attributeType="String"/>
+        <attribute name="artLastAdded" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="artName" optional="YES" attributeType="String"/>
+        <attribute name="artNew" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="artTop" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="ModsModelCD" representedClassName="ModsModelCD" syncable="YES">
+        <attribute name="modDescription" optional="YES" attributeType="String"/>
+        <attribute name="modFilePath" optional="YES" attributeType="String"/>
+        <attribute name="modImage" optional="YES" attributeType="String"/>
+        <attribute name="modLastAdded" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="modName" optional="YES" attributeType="String"/>
+        <attribute name="modNew" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="modTop" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="TopicsModelCD" representedClassName="TopicsModelCD" syncable="YES">
+        <attribute name="topicDescription" optional="YES" attributeType="String"/>
+        <attribute name="topicImage" optional="YES" attributeType="String"/>
+        <attribute name="topicLastAdded" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="topicName" optional="YES" attributeType="String"/>
+        <attribute name="topicNew" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="topicTop" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+    </entity>
+</model>
