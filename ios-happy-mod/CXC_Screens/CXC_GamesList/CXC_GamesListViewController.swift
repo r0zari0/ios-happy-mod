@@ -146,6 +146,12 @@ extension CXC_GamesListViewController: UITableViewDelegate, UITableViewDataSourc
                 // Заблокировать контент
                 cell.isLocked = true
             }
+            
+            if IAPManager.shared.productBought.contains(.unlockFive) {
+                cell.isLocked = false
+            } else {
+                cell.isLocked = true
+            }
         }
         
         if presenter.screenType == .apps && (indexPath.item == 0 || indexPath.item == 1) {
