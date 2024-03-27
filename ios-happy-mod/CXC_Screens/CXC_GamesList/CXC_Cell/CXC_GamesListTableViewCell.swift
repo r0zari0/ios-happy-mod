@@ -9,6 +9,16 @@ class CXC_GamesListTableViewCell: UITableViewCell {
     
     @IBOutlet weak var CXC_MyView: UIView!
     
+    var isLocked: Bool = true {
+        didSet {
+            if isLocked {
+                
+            } else {
+                
+            }
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setupMyCXC_TableViewCell()
@@ -18,13 +28,8 @@ class CXC_GamesListTableViewCell: UITableViewCell {
         selectionStyle = .none
         CXC_MyView.layer.cornerRadius = 16
     }
-    //type
+    
     func config(content: ModsType) {
         CXC_Label.text = content.name
-//            if let apptype = content as? AppsType {
-//                CXC_Label.text = apptype.name
-//            } else if let gamesType = content as? ModsType {
-//                CXC_Label.text = gamesType.name
-//            }
         }
     }

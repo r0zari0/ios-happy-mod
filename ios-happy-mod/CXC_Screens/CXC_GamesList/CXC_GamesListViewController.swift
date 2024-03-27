@@ -53,7 +53,7 @@ class CXC_GamesListViewController: UIViewController {
                 CXC_GamesListTableView.reloadData()
             }
         }
-        }
+    }
     
     func checkSubscriptions() {
         if IAPManager.shared.productBought.contains(.unlockContentProduct) {
@@ -118,7 +118,7 @@ extension CXC_GamesListViewController: UITableViewDelegate, UITableViewDataSourc
         
         var selectedContent: [ModsModel_CXC] = []
         
-         selectedContent = Array(presenter.mods[indexPath.row].mods)
+        selectedContent = Array(presenter.mods[indexPath.row].mods)
         presenter.showModsVC(view: self, mod: selectedContent)
     }
     
@@ -137,6 +137,32 @@ extension CXC_GamesListViewController: UITableViewDelegate, UITableViewDataSourc
         }
         let mod = presenter.mods[indexPath.row]
         cell.config(content: mod)
+        
+        if presenter.screenType == .games && (indexPath.item == 0 || indexPath.item == 1) {
+            if IAPManager.shared.productBought.contains(.mainProduct) {
+                // Разблокировать контент
+                cell.isLocked = false
+            } else {
+                // Заблокировать контент
+                cell.isLocked = true
+            }
+        }
+        
+        if presenter.screenType == .apps && (indexPath.item == 0 || indexPath.item == 1) {
+            if IAPManager.shared.productBought.contains(.unlockContentProduct) {
+                cell.isLocked = false
+            } else {
+                cell.isLocked = true
+            }
+        }
+        
+        if presenter.screenType == .topics && (indexPath.item == 0 || indexPath.item == 1) {
+            if IAPManager.shared.productBought.contains(.unlockContentProduct) {
+                cell.isLocked = false
+            } else {
+                cell.isLocked = true
+            }
+        }
         return cell
     }
 }
