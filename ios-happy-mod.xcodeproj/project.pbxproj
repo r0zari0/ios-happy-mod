@@ -44,7 +44,7 @@
 		DAA0D0352B7198A0002E3397 /* CXC_ModsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAA0D0332B7198A0002E3397 /* CXC_ModsVC.xib */; };
 		DAA0D0372B7198BF002E3397 /* CXC_ModsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D0362B7198BF002E3397 /* CXC_ModsPresenter.swift */; };
 		DAC0714A2BB3572A007DEBBA /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC071492BB3572A007DEBBA /* NotificationService.swift */; };
-		DAC0714E2BB3572A007DEBBA /* Notification.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DAC071472BB3572A007DEBBA /* Notification.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DAC0714E2BB3572A007DEBBA /* PushwooshCenter.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DAC071472BB3572A007DEBBA /* PushwooshCenter.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DAC071552BB35954007DEBBA /* Configurations_REFACTOR.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC071532BB35954007DEBBA /* Configurations_REFACTOR.swift */; };
 		DAC071582BB46A81007DEBBA /* Pushwoosh in Frameworks */ = {isa = PBXBuildFile; productRef = DAC071572BB46A81007DEBBA /* Pushwoosh */; };
 		DAC0715B2BB46C0B007DEBBA /* Adjust in Frameworks */ = {isa = PBXBuildFile; productRef = DAC0715A2BB46C0B007DEBBA /* Adjust */; };
@@ -213,7 +213,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				DAC0714E2BB3572A007DEBBA /* Notification.appex in Embed Foundation Extensions */,
+				DAC0714E2BB3572A007DEBBA /* PushwooshCenter.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,7 +253,7 @@
 		DAA0D0322B7198A0002E3397 /* CXC_ModsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXC_ModsVC.swift; sourceTree = "<group>"; };
 		DAA0D0332B7198A0002E3397 /* CXC_ModsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CXC_ModsVC.xib; sourceTree = "<group>"; };
 		DAA0D0362B7198BF002E3397 /* CXC_ModsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXC_ModsPresenter.swift; sourceTree = "<group>"; };
-		DAC071472BB3572A007DEBBA /* Notification.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Notification.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAC071472BB3572A007DEBBA /* PushwooshCenter.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PushwooshCenter.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC071492BB3572A007DEBBA /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		DAC0714B2BB3572A007DEBBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAC071532BB35954007DEBBA /* Configurations_REFACTOR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurations_REFACTOR.swift; sourceTree = "<group>"; };
@@ -498,7 +498,7 @@
 			isa = PBXGroup;
 			children = (
 				DAA0CFF62B715A9B002E3397 /* ios-happy-mod.app */,
-				DAC071472BB3572A007DEBBA /* Notification.appex */,
+				DAC071472BB3572A007DEBBA /* PushwooshCenter.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -984,9 +984,9 @@
 			productReference = DAA0CFF62B715A9B002E3397 /* ios-happy-mod.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DAC071462BB3572A007DEBBA /* Notification */ = {
+		DAC071462BB3572A007DEBBA /* PushwooshCenter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DAC0714F2BB3572A007DEBBA /* Build configuration list for PBXNativeTarget "Notification" */;
+			buildConfigurationList = DAC0714F2BB3572A007DEBBA /* Build configuration list for PBXNativeTarget "PushwooshCenter" */;
 			buildPhases = (
 				DAC071432BB3572A007DEBBA /* Sources */,
 				DAC071442BB3572A007DEBBA /* Frameworks */,
@@ -996,9 +996,9 @@
 			);
 			dependencies = (
 			);
-			name = Notification;
+			name = PushwooshCenter;
 			productName = Notification;
-			productReference = DAC071472BB3572A007DEBBA /* Notification.appex */;
+			productReference = DAC071472BB3572A007DEBBA /* PushwooshCenter.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -1088,7 +1088,7 @@
 			projectRoot = "";
 			targets = (
 				DAA0CFF52B715A9B002E3397 /* ios-happy-mod */,
-				DAC071462BB3572A007DEBBA /* Notification */,
+				DAC071462BB3572A007DEBBA /* PushwooshCenter */,
 			);
 		};
 /* End PBXProject section */
@@ -1257,12 +1257,12 @@
 /* Begin PBXTargetDependency section */
 		DAC0714D2BB3572A007DEBBA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DAC071462BB3572A007DEBBA /* Notification */;
+			target = DAC071462BB3572A007DEBBA /* PushwooshCenter */;
 			targetProxy = DAC0714C2BB3572A007DEBBA /* PBXContainerItemProxy */;
 		};
 		DAC071782BB475D9007DEBBA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DAC071462BB3572A007DEBBA /* Notification */;
+			target = DAC071462BB3572A007DEBBA /* PushwooshCenter */;
 			targetProxy = DAC071772BB475D9007DEBBA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1875,7 +1875,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DAC0714F2BB3572A007DEBBA /* Build configuration list for PBXNativeTarget "Notification" */ = {
+		DAC0714F2BB3572A007DEBBA /* Build configuration list for PBXNativeTarget "PushwooshCenter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DAC071502BB3572A007DEBBA /* Debug */,

@@ -32,9 +32,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSY-4l-Vcu">
-                                <rect key="frame" x="282" y="29.666666666666671" width="34" height="30"/>
+                                <rect key="frame" x="292" y="37.666666666666664" width="24" height="14"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" image="Arrow"/>
+                                <buttonConfiguration key="configuration" style="filled"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" name="GreenColor"/>
@@ -68,7 +68,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="Arrow" width="10" height="16"/>
         <namedColor name="GreenColor">
             <color red="0.41999998688697815" green="0.70999997854232788" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

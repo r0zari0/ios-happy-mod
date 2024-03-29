@@ -32,4 +32,9 @@ class CXC_Navigator {
 //        vc.modalPresentationStyle = .overFullScreen
 //        view.present(vc, animated: true)
     }
+    
+    func showPremiumMainController(view: UIViewController) {
+        let vc = assembler.createPremiumMainController()
+        view.navigationController?.pushViewController(vc, animated: true)
+    }
 }

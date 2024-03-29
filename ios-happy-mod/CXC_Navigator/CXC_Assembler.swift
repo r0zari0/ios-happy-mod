@@ -47,4 +47,8 @@ class CXC_Assembler {
         
         return vc
     }
+    func createPremiumMainController() -> UIViewController {
+        let vc = PremiumMainController()
+        return vc
+    }
 }

@@ -448,7 +448,7 @@ extension PremiumMainController : ReusableViewEvent {
             self.view0.fadeOut()
             self.view1.fadeIn()
             UIApplication.shared.impactFeedbackGenerator(type: .medium)
-            ThirdPartyServicesManager.shared.makeATT_REFACTOR()
+//            ThirdPartyServicesManager.shared.makeATT_REFACTOR()
         case .second:
             self.view1.fadeOut()
             self.viewTransaction.fadeIn()

@@ -9,16 +9,6 @@ class CXC_GamesListTableViewCell: UITableViewCell {
     
     @IBOutlet weak var CXC_MyView: UIView!
     
-    var isLocked: Bool = true {
-        didSet {
-            if isLocked {
-                
-            } else {
-                
-            }
-        }
-    }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         setupMyCXC_TableViewCell()
@@ -29,7 +19,10 @@ class CXC_GamesListTableViewCell: UITableViewCell {
         CXC_MyView.layer.cornerRadius = 16
     }
     
-    func config(content: ModsType) {
+    func config(content: ModsType, isLocked: Bool) {
         CXC_Label.text = content.name
-        }
+        let imageName = isLocked ? "lockedImage" : "arrowImage"
+        CXC_ArrowImage.setImage(UIImage(named: imageName), for: .normal)
+        CXC_MyView.backgroundColor = isLocked ? .myGreen : .myDarkGreen
     }
+}

@@ -20,44 +20,45 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: scene)
         self.window = window
         
-        IAPManager.shared.validateSubscriptions_REFACTOR(productIdentifiers: [Configurations_REFACTOR.mainSubscriptionID,
-                                                                              Configurations_REFACTOR.unlockFuncSubscriptionID,
-                                                                              Configurations_REFACTOR.unlockContentSubscriptionID,
-                                                                              Configurations_REFACTOR.unlockerThreeSubscriptionID,
-                                                                              Configurations_REFACTOR.unlockerFourSubscriptionID,
-                                                                              Configurations_REFACTOR.unlockerFiveSubscriptionID]
-        ) { result in
-            if let userHaveSub = result[Configurations_REFACTOR.mainSubscriptionID] {
-                switch userHaveSub {
-                case true:
-                    let navigator = CXC_Navigator()
-                    let realm = DataBaseManager()
-                    let dropBox = CXC_Dropbox()
-                    
-                    let vc: LoadingVC_CXCViewController = LoadingVC_CXCViewController(dropBox: dropBox, navigator: navigator, realmDB: realm)
-                    let navController = UINavigationController(rootViewController: vc)
-                    navController.modalPresentationStyle = .fullScreen
-                    window.rootViewController = navController
-                    window.makeKeyAndVisible()
-                case false:
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
-                        let unsubscribedVC = PremiumMainController()
-                        unsubscribedVC.modalPresentationStyle = .fullScreen
-                        window.rootViewController = unsubscribedVC
-                        window.makeKeyAndVisible()
-                    })
-                }
-            } else {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
-                    let unsubscribedVC = PremiumMainController()
-                    unsubscribedVC.modalPresentationStyle = .fullScreen
-                    window.rootViewController = unsubscribedVC
-                    window.makeKeyAndVisible()
-                })
-            }
-        }
+//        IAPManager.shared.validateSubscriptions_REFACTOR(productIdentifiers: [Configurations_REFACTOR.mainSubscriptionID,
+//                                                                              Configurations_REFACTOR.unlockFuncSubscriptionID,
+//                                                                              Configurations_REFACTOR.unlockContentSubscriptionID,
+//                                                                              Configurations_REFACTOR.unlockerThreeSubscriptionID,
+//                                                                              Configurations_REFACTOR.unlockerFourSubscriptionID,
+//                                                                              Configurations_REFACTOR.unlockerFiveSubscriptionID]
+//        ) { result in
+//            if let userHaveSub = result[Configurations_REFACTOR.mainSubscriptionID] {
+//                switch userHaveSub {
+//                case true:
+//                    let navigator = CXC_Navigator()
+//                    let realm = DataBaseManager()
+//                    let dropBox = CXC_Dropbox()
+//                    
+//                    let vc: LoadingVC_CXCViewController = LoadingVC_CXCViewController(dropBox: dropBox, navigator: navigator, realmDB: realm)
+//                    let navController = UINavigationController(rootViewController: vc)
+//                    navController.modalPresentationStyle = .fullScreen
+//                    window.rootViewController = navController
+//                    window.makeKeyAndVisible()
+//                case false:
+//                    DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+//                        let unsubscribedVC = PremiumMainController()
+//                        unsubscribedVC.modalPresentationStyle = .fullScreen
+//                        window.rootViewController = unsubscribedVC
+//                        window.makeKeyAndVisible()
+//                    })
+//                }
+//            } else {
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+//                    let unsubscribedVC = PremiumMainController()
+//                    unsubscribedVC.modalPresentationStyle = .fullScreen
+//                    window.rootViewController = unsubscribedVC
+//                    window.makeKeyAndVisible()
+//                })
+//            }
+//        }
     }
 
+    //MARK  -
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.
@@ -68,10 +69,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneDidBecomeActive(_ scene: UIScene) {
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
-        Task {
-            try? await Task.sleep(nanoseconds: 500_000_000)
-            ThirdPartyServicesManager.shared.makeATT_REFACTOR()
-        }
+//        Task {
+//            try? await Task.sleep(nanoseconds: 500_000_000)
+//            ThirdPartyServicesManager.shared.makeATT_REFACTOR()
+//        }
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
