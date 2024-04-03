@@ -2,7 +2,7 @@
 import UIKit
 
 class CXC_DetailedVC: UIViewController {
-
+    
     @IBOutlet weak var CXC_View: UIView!
     
     @IBOutlet weak var saveModButton: UIButton!
@@ -31,6 +31,7 @@ class CXC_DetailedVC: UIViewController {
         super.viewDidLoad()
         setupMyUI_CXC()
         presenter.setContent(presenter.content)
+        print("🥘", presenter.content.filePath)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,14 +49,12 @@ class CXC_DetailedVC: UIViewController {
         CXC_TextView.text = presenter.content.modDescription
         CXC_ModImage.image = presenter.image.image
         
-//        saveModButton.addTarget(self, action: #selector(saveModButtonAction(_:)), for: .touchUpInside)
-        
         if presenter.content.isFavorite == true {
             saveModButton.setImage(UIImage(named: "saved"), for: .normal)
         } else {
             saveModButton.setImage(UIImage(named: "empty"), for: .normal)
         }
-
+        
     }
     
     @IBAction func saveModButtonAction(_ sender: Any) {
@@ -72,7 +71,34 @@ class CXC_DetailedVC: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-//    @objc func saveModButtonAction(_ sender: UIButton) {
-//            presenter.saveToFavorites()
-//        }
+    @IBAction func downloadActionButton(_ sender: Any) {
+        getFilePath(content: presenter.content, contentType: presenter.screenType) { filePath in
+            if let filePath = filePath {
+                print("🥓", filePath)
+            } else {
+                print(String(describing: filePath))
+            }
+        }
+    }
+}
+
+extension CXC_DetailedVC {
+    func getFilePath(content: ModsModel_CXC, contentType: ContentType, completion: @escaping (String?) -> Void) {
+        CXC_ModImage.showActivityIndicator()
+        
+        Task {
+            do {
+                let filePath = try await CXC_Dropbox.shared.getFilePath(contentType: contentType, filePath: content.filePath)
+                DispatchQueue.main.async {
+                    print("🌯", filePath)
+                    completion(filePath)
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    completion(nil)
+                    print("🤕 Error fetching filePath:", error)
+                }
+            }
+        }
+    }
 }

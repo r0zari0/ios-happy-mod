@@ -75,6 +75,7 @@
 		DACB9C242B73607D00D2B02D /* CXC_MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACB9C232B73607D00D2B02D /* CXC_MenuPresenter.swift */; };
 		DACB9C272B73F34100D2B02D /* CXC_ModCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACB9C252B73F34100D2B02D /* CXC_ModCell.swift */; };
 		DACB9C282B73F34100D2B02D /* CXC_ModCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DACB9C262B73F34100D2B02D /* CXC_ModCell.xib */; };
+		DADDD0752BBB4523003A05B3 /* InternetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADDD0742BBB4523003A05B3 /* InternetManager.swift */; };
 		DAFB79C02BB33B3F00D6EF21 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = DAFB79BF2BB33B3F00D6EF21 /* FirebaseAnalytics */; };
 		DAFB79C22BB33B3F00D6EF21 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = DAFB79C12BB33B3F00D6EF21 /* FirebaseAnalyticsOnDeviceConversion */; };
 		DAFB79C42BB33B3F00D6EF21 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DAFB79C32BB33B3F00D6EF21 /* FirebaseAnalyticsSwift */; };
@@ -276,6 +277,7 @@
 		DACB9C232B73607D00D2B02D /* CXC_MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXC_MenuPresenter.swift; sourceTree = "<group>"; };
 		DACB9C252B73F34100D2B02D /* CXC_ModCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXC_ModCell.swift; sourceTree = "<group>"; };
 		DACB9C262B73F34100D2B02D /* CXC_ModCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CXC_ModCell.xib; sourceTree = "<group>"; };
+		DADDD0742BBB4523003A05B3 /* InternetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetManager.swift; sourceTree = "<group>"; };
 		DAFB79F52BB344F000D6EF21 /* sub.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sub.ttf; sourceTree = "<group>"; };
 		DAFB79F72BB3540200D6EF21 /* ServicesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesManager.swift; sourceTree = "<group>"; };
 		DAFB79F92BB3540200D6EF21 /* btn_gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = btn_gif.gif; sourceTree = "<group>"; };
@@ -480,6 +482,7 @@
 			isa = PBXGroup;
 			children = (
 				DA70A2EC2B7C187E00B70071 /* DropBoxKeys_CXC.swift */,
+				DADDD0742BBB4523003A05B3 /* InternetManager.swift */,
 			);
 			path = CXC_Manager;
 			sourceTree = "<group>";
@@ -1216,6 +1219,7 @@
 				DA2C13B82B8FB3D000E57CE2 /* CXC_HTTP.swift in Sources */,
 				DACB9C1D2B7356CA00D2B02D /* CXC_DetailedPresenter.swift in Sources */,
 				DA2C13C02B9313E000E57CE2 /* LoadingVC_CXCViewController.swift in Sources */,
+				DADDD0752BBB4523003A05B3 /* InternetManager.swift in Sources */,
 				DAA0D0042B715A9B002E3397 /* ios_happy_mod.xcdatamodeld in Sources */,
 				DAFB7A852BB3540200D6EF21 /* ServicesManager.swift in Sources */,
 				DAA0D01F2B71603A002E3397 /* CXC_Assembler.swift in Sources */,

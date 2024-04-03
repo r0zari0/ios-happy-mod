@@ -10,11 +10,10 @@ class CXC_ModsPresenter {
     
     let screenType: ContentType
     let navigator: CXC_Navigator
-    let realm: DataBaseManager
+    let realm = DataBaseManager.shared
     
-    init(navigator: CXC_Navigator, realm: DataBaseManager, secreenType: ContentType) {
+    init(navigator: CXC_Navigator, secreenType: ContentType) {
         self.navigator = navigator
-        self.realm = realm
         self.screenType = secreenType
     }
     
@@ -37,7 +36,6 @@ class CXC_ModsPresenter {
     }
     
     func showDetaildVC(view: UIViewController, indexPath: Int, screenType: ContentType, presenter: ModsModel_CXC, image: UIImageView) {
-//        modsType[indexPath]
         
         navigator.showCXC_DetailedVC(view: view, screenType: screenType, presenter: presenter, image: image, realm: realm)
     }

@@ -48,7 +48,6 @@ class ModsType: Object, Codable {
     @Persisted(primaryKey: true) var name: String = ""
     @Persisted var mods = List<ModsModel_CXC>()
     
-    
     override init() {
         super.init()
     }
@@ -65,6 +64,35 @@ class ModsType: Object, Codable {
     }
 }
 
+class TopicModVariant: Object, Codable {
+    @Persisted var displayImage: String
+    @Persisted var title: String
+    @Persisted var discretion: String
+    @Persisted var version: String
+    @Persisted var weight: String
+    @Persisted var file: String
+    
+    enum CodingKeys: String, CodingKey {
+        case displayImage
+        case title
+        case discretion
+        case version
+        case weight
+        case file
+    }
+    
+    required convenience init(from decoder: Decoder) throws {
+        self.init()
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.displayImage = try container.decode(String.self, forKey: .displayImage)
+        self.title = try container.decode(String.self, forKey: .title)
+        self.discretion = try container.decode(String.self, forKey: .discretion)
+        self.version = try container.decode(String.self, forKey: .version)
+        self.weight = try container.decode(String.self, forKey: .weight)
+        self.file = try container.decode(String.self, forKey: .file)
+    }
+}
+
 class ModsModel_CXC: Object, Codable {
     @Persisted var isFavorite: Bool
     @Persisted var contentType: Int
@@ -76,12 +104,13 @@ class ModsModel_CXC: Object, Codable {
     @Persisted var new: Bool = false
     @Persisted var top: Bool = false
     @Persisted var lastAdded: Bool = false
+    @Persisted var topicmodvariant: List<TopicModVariant>
     
     enum CodingKeysMods: String, CodingKey {
         case name = "h5k617"
         case description = "o11v"
         case image = "_to5"
-        case filePath = "r0qmswrxs-l"
+        case filePath = "r0qmswrxs"
         case new = "new"
         case top = "top"
         case lastAdded = "lastAdded"
@@ -104,13 +133,14 @@ class ModsModel_CXC: Object, Codable {
         case new = "new"
         case top = "top"
         case lastAdded = "lastAdded"
+        case topicmodvariant = "topicmodvariant"
     }
     
     override init() {
         super.init()
     }
     
-    convenience init(isFavorite: Bool, contentType: Int, name: String, modDescription: String, image: String, filePath: String, new: Bool, top: Bool, lastAdded: Bool) {
+    convenience init(isFavorite: Bool, contentType: Int, name: String, modDescription: String, image: String, filePath: String, new: Bool, top: Bool, lastAdded: Bool, topicmodvariant: [TopicModVariant]) {
         self.init()
         self.isFavorite = isFavorite
         self.contentType = contentType
@@ -121,6 +151,7 @@ class ModsModel_CXC: Object, Codable {
         self.new = new
         self.top = top
         self.lastAdded = lastAdded
+        self.topicmodvariant.append(objectsIn: topicmodvariant)
     }
     
     required convenience init(from decoder: Decoder) throws {
@@ -184,5 +215,9 @@ class ModsModel_CXC: Object, Codable {
                 self.lastAdded = lastAdded
             }
         }
+        
+        if let variants = try? containerTopics.decode([TopicModVariant].self, forKey: .topicmodvariant) {
+                    self.topicmodvariant.append(objectsIn: variants)
+                }
     }
 }

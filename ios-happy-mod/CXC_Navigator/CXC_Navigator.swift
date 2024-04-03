@@ -4,8 +4,10 @@ import UIKit
 
 class CXC_Navigator {
     
+    static let shared = CXC_Navigator()
+    
     let assembler = CXC_Assembler()
-    let dropBox = CXC_Dropbox()
+    let dropBox = CXC_Dropbox.shared
     
     func showCXC_GamesListVC(view: UIViewController, dropBox: CXC_Dropbox, screenType: ContentType) {
         let vc = assembler.createCXC_GameList(navigator: self, dropBox: dropBox, screenType: screenType)
@@ -29,12 +31,10 @@ class CXC_Navigator {
 
         let vc = assembler.createMenuVC_CXC(navigator: self, dropBox: dropBox, selectedIndex: selactedIndex)
         view.navigationController?.pushViewController(vc, animated: true)
-//        vc.modalPresentationStyle = .overFullScreen
-//        view.present(vc, animated: true)
     }
     
-    func showPremiumMainController(view: UIViewController) {
-        let vc = assembler.createPremiumMainController()
+    func showPremiumMainController(view: UIViewController, productType: PremiumMainControllerStyle) {
+        let vc = assembler.createPremiumMainController(productType: productType)
         view.navigationController?.pushViewController(vc, animated: true)
     }
 }

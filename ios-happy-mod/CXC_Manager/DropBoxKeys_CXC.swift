@@ -392,21 +392,21 @@ extension CXC_Dropbox {
         }
     }
     
-    func getFile_ZmLIV(client: DropboxClient,
-                       with path: String,
-                       completion: @escaping (Data?) -> Void) {
-        var dapEliminater_tGa: Bool {
-            let isliminated = false
-            return isliminated
-        }
-        
-        let client = client.files.download(path: path).response { response, error in
-            if let error {
-                print(String(describing: error))
-            }
-            completion(response?.1)
-        }
-    }
+//    func getFile_ZmLIV(client: DropboxClient,
+//                       with path: String,
+//                       completion: @escaping (Data?) -> Void) {
+//        var dapEliminater_tGa: Bool {
+//            let isliminated = false
+//            return isliminated
+//        }
+//        
+//        let client = client.files.download(path: path).response { response, error in
+//            if let error {
+//                print(String(describing: error))
+//            }
+//            completion(response?.1)
+//        }
+//    }
     
     func getPath_WRNMc(for contentType: ContentType, imgPath: String) -> String {
         var isLoggedInWithFacebook: Bool {
@@ -425,5 +425,45 @@ extension CXC_Dropbox {
             return String(format: "/%@", imgPath)
         }
         
+    }
+}
+
+extension CXC_Dropbox {
+    func fetchFile(contentType: ContentType, filePath: String) async throws -> Data? {
+        let path = getFilePath(contentType: contentType, filePath: filePath)
+        do {
+            if let data = try await downloadDataWithCache(filePath: path) {
+                return data
+            } else {
+                return nil
+            }
+        } catch {
+            print("Ошибка при загрузке файла:", error)
+            return nil
+        }
+    }
+
+    func downloadDataWithCache(filePath: String) async throws -> Data? {
+        if let cachedData = DataCache.instance.readData(forKey: filePath) {
+            return cachedData
+        }
+        let client = try await CXC_getAuthorizedClient()
+        let data = try await CXC_download(client: client, filePath: filePath)
+
+            DataCache.instance.write(data: data, forKey: filePath)
+            return data
+    }
+
+    func getFilePath(contentType: ContentType, filePath: String) -> String {
+        switch contentType {
+        case .apps:
+            return "/Apps/\(filePath)"
+        case .games:
+            return "/Games/\(filePath)"
+        case .topics:
+            return "/Topics/\(filePath)"
+        default:
+            return ""
+        }
     }
 }

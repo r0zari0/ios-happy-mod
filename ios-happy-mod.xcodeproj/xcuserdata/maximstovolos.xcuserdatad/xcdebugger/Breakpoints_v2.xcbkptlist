@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "01DA7301-96C9-4E06-9B0D-17F356F8FC5C"
-            shouldBeEnabled = "No"
+            uuid = "32D8595E-2C27-4B08-8F5A-B6D9C8451E62"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ios-happy-mod/CXC_Screens/CXC_ModsVC/CXC_ModsVC.swift"
+            filePath = "ios-happy-mod/CXC_Screens/CXC_DetailedVC/CXC_DetailedVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
-            landmarkName = "collectionView(_:cellForItemAt:)"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

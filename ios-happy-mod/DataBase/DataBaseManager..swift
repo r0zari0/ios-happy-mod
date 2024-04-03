@@ -9,6 +9,8 @@ protocol IDataBaseManagerProtocol {
 
 class DataBaseManager: IDataBaseManagerProtocol {
     
+    static let shared = DataBaseManager()
+    
     private let allTasks = Dynamic([ModsModel_CXC()])
     private let realm = try! Realm()
     
@@ -21,18 +23,6 @@ class DataBaseManager: IDataBaseManagerProtocol {
             allTasks.value = resultTaskArray
         }
     }
-  
-//    func saveMods(task: ModsModel_CXC) {
-//        let realm = try! Realm()
-//        do {
-//            try realm.write {
-//                realm.add(task)
-//                print("🐓 Mod saved:", task.name)
-//            }
-//        } catch {
-//            print("Error saving apps model: \(error.localizedDescription)")
-//        }
-//    }
     
     func deleteMod(task: ModsModel_CXC) {
             let realm = try! Realm()
@@ -45,39 +35,6 @@ class DataBaseManager: IDataBaseManagerProtocol {
                 print("Error deleting apps model: (error.localizedDescription)")
             }
         }
-    
-//    func deleteMod(modName: String) {
-//        let realm = try! Realm()
-//        if let mod = realm.objects(ModsModel_CXC.self).filter("name == %@", modName).first {
-//            do {
-//                try realm.write {
-//                    realm.delete(mod)
-//                    print("🐊 Mod saved:", modName)
-//                }
-//            } catch {
-//                print("Error deleting mod: \(error.localizedDescription)")
-//            }
-//        } else {
-//            print("Mod with name \(modName) not found")
-//        }
-//    }
-    
-//    func saveModsTypes(types: [ModsType], contentType: ContentType) {
-//        let realm = try! Realm()
-//        do {
-//            try realm.write {
-//                for type in types {
-//                    type.contentType = contentType.rawValue
-//                    for mod in type.mods {
-//                        mod.contentType = contentType.rawValue
-//                    }
-//                }
-//                realm.add(types)
-//            }
-//        } catch {
-//            print("Error saving mods types: \(error.localizedDescription)")
-//        }
-//    }
     
     func saveModsTypes(types: [ModsType], contentType: ContentType) {
         let realm = try! Realm()

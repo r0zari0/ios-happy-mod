@@ -212,11 +212,24 @@ extension CXC_ModsVC: UITextFieldDelegate {
 
 extension CXC_ModsVC {
     func updateFavoriteButton(for mod: ModsModel_CXC) {
-            guard let index = presenter.mods.firstIndex(where: { $0.name == mod.name }), let cell = getCell(for: index) else {
+//            guard let index = presenter.mods.firstIndex(where: { $0.name == mod.name }), let cell = getCell(for: index) else {
+//                return
+//            }
+        guard let index = presenter.mods.firstIndex(where: { $0.name == mod.name }) else {
+            return
+        }
+            presenter.saveToFavorites(mod: mod)
+        
+        if presenter.screenType == .favorites {
+            presenter.mods.remove(at: index)
+            CXC_ModCollectionView.reloadData()
+            updateLabelsVisibility()
+        } else {
+            guard let cell = getCell(for: index) else {
                 return
             }
-            presenter.saveToFavorites(mod: mod)
             cell.config(content: mod)
+        }
         }
     
     func getCell(for index: Int) -> CXC_ModCell? {
@@ -242,8 +255,6 @@ extension CXC_ModsVC {
                 CXC_ModCollectionView.isHidden = false
             }
         } else if presenter.screenType == .favorites {
-            noTopicsLabel.isHidden = true
-            noResultsLabel.isHidden = true
             if presenter.mods.isEmpty {
                 noFavoritesLabel.isHidden = false
                 CXC_ModCollectionView.isHidden = true
@@ -251,6 +262,8 @@ extension CXC_ModsVC {
                 noFavoritesLabel.isHidden = true
                 CXC_ModCollectionView.isHidden = false
             }
+            noTopicsLabel.isHidden = true
+            noResultsLabel.isHidden = true
         } else {
             noTopicsLabel.isHidden = true
             noFavoritesLabel.isHidden = true

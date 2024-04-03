@@ -79,6 +79,9 @@
                                 <fontDescription key="titleFontDescription" name="Inter-Regular_SemiBold" family="Inter" pointSize="20"/>
                                 <color key="baseBackgroundColor" name="GreenColor"/>
                             </buttonConfiguration>
+                            <connections>
+                                <action selector="downloadActionButton:" destination="-1" eventType="touchUpInside" id="nxS-FX-kjH"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" name="lightGreen"/>

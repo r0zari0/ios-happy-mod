@@ -11,7 +11,9 @@ private func refactor_REFACTOR(_ kpop: Bool, biases: Bool, _wonderwhy: Int) -> D
     return Double(Int(thirdWonderWhy * Double.random(in: 0...100)) + firstBias + secondBias)
 }
 
-//
+protocol PremiumMainControllerDelegate: AnyObject {
+    func premiumControllerDidDismiss()
+}
 
 enum PremiumMainControllerStyle: CaseIterable {
     case mainProduct,unlockContentProduct,unlockFuncProduct,unlockOther, unlockFour, unlockFive
@@ -60,6 +62,8 @@ class PremiumMainController: UIViewController {
     public var productBuy : PremiumMainControllerStyle = .mainProduct
     
     private var intScreenStatus = 0
+    
+    weak var delegate: PremiumMainControllerDelegate?
     
     override  func viewDidLoad() {
         super.viewDidLoad()
@@ -361,10 +365,7 @@ class PremiumMainController: UIViewController {
     }
     
     private func openApp_REFACTOR(){
-        
-        let dropBox = CXC_Dropbox()
-        let navigator = CXC_Navigator()
-        let realmDB = DataBaseManager()
+    
         //
 
         func refactor_REFACTOR(_ kpop: Bool, biases: Bool, _wonderwhy: Int) -> Double {
@@ -373,14 +374,20 @@ class PremiumMainController: UIViewController {
             let thirdWonderWhy: Double = Double("Chaewon".count * 777 + "Wonyoung".count / 777)
             return Double(Int(thirdWonderWhy * Double.random(in: 0...100)) + firstBias + secondBias)
         }
-
+        
         //
-        if productBuy == .mainProduct {
-            let vc = LoadingVC_CXCViewController(dropBox: dropBox, navigator: navigator, realmDB: realmDB)
-            UIApplication.shared.setRootVC(vc)
-        } else {
-            dismiss(animated: true)
+        switch productBuy {
+        case .mainProduct:
+            let vc = LoadingVC_CXCViewController()
+            let navController = UINavigationController(rootViewController: vc)
+            navController.modalPresentationStyle = .fullScreen
+            UIApplication.shared.setRootVC(navController)
+        default :
+            dismiss(animated: true) {
+                self.delegate?.premiumControllerDidDismiss()
+            }
         }
+        
         UIApplication.shared.notificationFeedbackGenerator(type: .success)
         deinitPlayer_REFACTOR()
     }
@@ -574,4 +581,3 @@ extension PremiumMainController: PlayerDelegate, PlayerPlaybackDelegate {
 
     func playerPlaybackDidLoop(_ player: Player) { }
 }
-

@@ -23,6 +23,6 @@ class CXC_GamesListTableViewCell: UITableViewCell {
         CXC_Label.text = content.name
         let imageName = isLocked ? "lockedImage" : "arrowImage"
         CXC_ArrowImage.setImage(UIImage(named: imageName), for: .normal)
-        CXC_MyView.backgroundColor = isLocked ? .myGreen : .myDarkGreen
+        CXC_MyView.backgroundColor = isLocked ? .myDarkGreen : .myGreen
     }
 }

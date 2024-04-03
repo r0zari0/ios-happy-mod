@@ -6,7 +6,7 @@ class CXC_MenuPresenter {
     
     let navigator: CXC_Navigator
     let realm: DataBaseManager
-    var topics: [ModsType] = []
+//    var topics: [ModsType] = []
     
     
     init(navigator: CXC_Navigator, realm: DataBaseManager) {
@@ -14,9 +14,9 @@ class CXC_MenuPresenter {
         self.realm = realm
     }
     
-    func getTopics(completion: ()->()) {
-        let topics: [ModsType] = realm.getTopics()
-        self.topics = topics
-        completion()
-    }
+//    func getTopics(completion: ()->()) {
+//        let topics: [ModsType] = realm.getTopics()
+//        self.topics = topics
+//        completion()
+//    }
 }

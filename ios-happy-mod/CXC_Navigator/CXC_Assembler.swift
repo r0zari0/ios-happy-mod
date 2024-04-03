@@ -1,19 +1,20 @@
 
 import Foundation
 import UIKit
+import StoreKit
 
 class CXC_Assembler {
-    private let realm = DataBaseManager()
+    private let realm = DataBaseManager.shared
 
     func createCXC_Loading(navigator: CXC_Navigator, dropBox: CXC_Dropbox) -> UIViewController {
-        let vc = LoadingVC_CXCViewController(dropBox: dropBox, navigator: navigator, realmDB: realm)
+        let vc = LoadingVC_CXCViewController()
         
         return vc
     }
     
     func createCXC_GameList(navigator: CXC_Navigator, dropBox: CXC_Dropbox, screenType: ContentType) -> UIViewController {
         let presenter = CXC_GamesListPresenter(navigator: navigator, realm: realm, secreenType: screenType)
-        let vc = CXC_GamesListViewController(presenter: presenter, dropBox: dropBox)
+        let vc = CXC_GamesListViewController(presenter: presenter)
         
         return vc
     }
@@ -22,7 +23,7 @@ class CXC_Assembler {
                          dropBox: CXC_Dropbox,
                          screenType: ContentType,
                          mod: [ModsModel_CXC]) -> UIViewController {
-        let presenter = CXC_ModsPresenter(navigator: navigator, realm: realm, secreenType: screenType)
+        let presenter = CXC_ModsPresenter(navigator: navigator, secreenType: screenType)
         let vc = CXC_ModsVC(presenter: presenter, dropBox: dropBox)
         
         switch screenType {
@@ -47,8 +48,10 @@ class CXC_Assembler {
         
         return vc
     }
-    func createPremiumMainController() -> UIViewController {
+    
+    func createPremiumMainController(productType: PremiumMainControllerStyle) -> UIViewController {
         let vc = PremiumMainController()
+        vc.productBuy = productType
         return vc
     }
 }

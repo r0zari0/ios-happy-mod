@@ -31,14 +31,11 @@ class LoadingVC_CXCViewController: UIViewController {
     
     @IBOutlet weak var laodingIndicator: UIActivityIndicatorView!
     
-    let dropBox: CXC_Dropbox
-    let navigator: CXC_Navigator
-    let realmDB: DataBaseManager
+    let dropBox = CXC_Dropbox.shared
+    let navigator = CXC_Navigator.shared
+    let realmDB = DataBaseManager.shared
     
-    init(dropBox: CXC_Dropbox, navigator: CXC_Navigator, realmDB: DataBaseManager) {
-        self.dropBox = dropBox
-        self.navigator = navigator
-        self.realmDB = realmDB
+    init() {
         super.init(nibName: nil, bundle: nil)
     }
     

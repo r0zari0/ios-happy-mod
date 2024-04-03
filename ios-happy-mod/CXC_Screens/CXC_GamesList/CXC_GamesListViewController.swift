@@ -13,13 +13,12 @@ class CXC_GamesListViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     
     let presenter: CXC_GamesListPresenter
-    let dropBox: CXC_Dropbox
+    let dropBox = CXC_Dropbox.shared
     
     let cellIdentifier: String = String(describing: "CXC_GamesListTableViewCell")
     
-    init(presenter: CXC_GamesListPresenter, dropBox: CXC_Dropbox) {
+    init(presenter: CXC_GamesListPresenter) {
         self.presenter = presenter
-        self.dropBox = dropBox
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -55,44 +54,6 @@ class CXC_GamesListViewController: UIViewController {
         }
     }
     
-//    func checkSubscriptions() {
-//        if IAPManager.shared.productBought.contains(.unlockContentProduct) {
-//            //someCode
-//        } else {
-//            //someCode
-//        }
-//        
-//        if IAPManager.shared.productBought.contains(.unlockFive) {
-//            //SomeCode
-//        } else {
-//            //someCode
-//        }
-//        
-//        if IAPManager.shared.productBought.contains(.unlockFour) {
-//            //someCode
-//        } else {
-//            //someCode
-//        }
-//        
-//        if IAPManager.shared.productBought.contains(.unlockFuncProduct) {
-//            //someCode
-//        } else {
-//            //somecode
-//        }
-//        
-//        if IAPManager.shared.productBought.contains(.mainProduct) {
-//            //someCode
-//        } else {
-//            //someCode
-//        }
-//        
-//        if IAPManager.shared.productBought.contains(.unlockOther) {
-//            //someCode
-//        } else {
-//            //someCode
-//        }
-//    }
-    
     func setupCXC_GamesUI() {
         CXC_MenuButton.titleLabel?.textColor = .white
         navigationController?.navigationBar.isHidden = true
@@ -113,79 +74,76 @@ class CXC_GamesListViewController: UIViewController {
     }
 }
 
-extension CXC_GamesListViewController: UITableViewDelegate, UITableViewDataSource {
+extension CXC_GamesListViewController: UITableViewDelegate, UITableViewDataSource, PremiumMainControllerDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         var selectedContent: [ModsModel_CXC] = []
         selectedContent = Array(presenter.mods[indexPath.row].mods)
         
-        if presenter.screenType == .games && (indexPath.item == 2 || indexPath.item == 3) {
-            if IAPManager.shared.productBought.contains(.unlockFour) {
-                presenter.showModsVC(view: self, mod: selectedContent)
-            } else {
-                presenter.navigator.showPremiumMainController(view: self)
+        if isLocked(index: indexPath.row) {
+            var productBuy: PremiumMainControllerStyle {
+                switch presenter.screenType {
+                case .apps:
+                    return indexPath.row == 0 ? .unlockContentProduct : .unlockFuncProduct
+                case .games:
+                    return indexPath.row == 0 ? .unlockOther : .unlockFour
+                case .topics:
+                    return .unlockFive
+                default: return .mainProduct
+                }
             }
+            showPremium(productBuy: productBuy)
+        } else {
+            presenter.showModsVC(view: self, mod: selectedContent)
         }
-        
-        if presenter.screenType == .apps && (indexPath.item == 0 || indexPath.item == 1) {
-            if IAPManager.shared.productBought.contains(.unlockFive) {
-                presenter.showModsVC(view: self, mod: selectedContent)
-            } else {
-                presenter.navigator.showPremiumMainController(view: self)
-            }
-        }
-        
-        if presenter.screenType == .apps && (indexPath.item == 0 || indexPath.item == 1) {
-            if IAPManager.shared.productBought.contains(.unlockOther) {
-                presenter.showModsVC(view: self, mod: selectedContent)
-            } else {
-                presenter.navigator.showPremiumMainController(view: self)
-            }
-        }
-        
-//        presenter.showModsVC(view: self, mod: selectedContent)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if presenter.screenType == .topics {
-            return 1
-        } else {
-            let count = presenter.mods.count
-            return count
-        }
+        let count = presenter.mods.count
+        return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? CXC_GamesListTableViewCell else {
             return UITableViewCell()
         }
-        let mod = presenter.mods[indexPath.row]
         
-        if presenter.screenType == .games && (indexPath.item == 0 || indexPath.item == 1) {
-            if IAPManager.shared.productBought.contains(.unlockFour) {
-                // Разблокировать контент
-                cell.config(content: mod, isLocked: false)
-            } else {
-                // Заблокировать контент
-                cell.config(content: mod, isLocked: true)
-            }
-        }
-        
-        if presenter.screenType == .apps && (indexPath.item == 0 || indexPath.item == 1) {
-            if IAPManager.shared.productBought.contains(.unlockFive) {
-                cell.config(content: mod, isLocked: false)
-            } else {
-                cell.config(content: mod, isLocked: true)
-            }
-        }
-        
-        if presenter.screenType == .topics && (indexPath.item == 0 || indexPath.item == 1) {
-            if IAPManager.shared.productBought.contains(.unlockOther) {
-                cell.config(content: mod, isLocked: false)
-            } else {
-                cell.config(content: mod, isLocked: true)
-            }
-        }
+        cell.config(content: presenter.mods[indexPath.row], isLocked: isLocked(index: indexPath.row))
         return cell
+    }
+    
+    func premiumControllerDidDismiss() {
+        CXC_GamesListTableView.reloadData()
+    }
+    
+    private func showPremium(productBuy: PremiumMainControllerStyle) {
+        let vc = PremiumMainController()
+        vc.productBuy = productBuy
+        vc.modalPresentationStyle = .overFullScreen
+        vc.delegate = self
+        self.present(vc, animated: true)
+    }
+    
+    private func isLocked(index: Int) -> (Bool) {
+        switch presenter.screenType {
+        case .apps:
+            switch index {
+            case 0: return !IAPManager.shared.productBought.contains(.unlockContentProduct)
+            case 1: return !IAPManager.shared.productBought.contains(.unlockFuncProduct)
+            default: return false
+            }
+        case .games:
+            switch index {
+            case 0: return !IAPManager.shared.productBought.contains(.unlockOther)
+            case 1: return !IAPManager.shared.productBought.contains(.unlockFour)
+            default: return false
+            }
+        case .topics:
+            switch index {
+            case 0, 1, 2: return false
+            default: return !IAPManager.shared.productBought.contains(.unlockFive)
+            }
+        default: return false
+        }
     }
 }
