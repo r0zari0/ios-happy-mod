@@ -37,6 +37,25 @@ class CXC_GamesListPresenter {
         navigator.showCXC_MenuVC(view: vc, selactedIndex: index)
     }
     
+    func getAllMods(completion: @escaping ([ModsType]) -> Void) {
+        switch screenType {
+        case .apps:
+            getApps {
+                completion(self.mods)
+            }
+        case .games:
+            getGames {
+                completion(self.mods)
+            }
+        case .topics:
+            getTopics {
+                completion(self.mods)
+            }
+        default:
+            completion([])
+        }
+    }
+    
     func getGames(completion: ()->()) {
         let mods: [ModsType] = realm.getMods()
         self.mods = mods

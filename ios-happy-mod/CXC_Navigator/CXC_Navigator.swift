@@ -21,6 +21,12 @@ class CXC_Navigator {
         view.navigationController?.pushViewController(vc, animated: true)
     }
     
+    func showTopicsVC(view: UIViewController, screenType: ContentType, presenter: ModsModel_CXC) {
+        let vc = assembler.createTopicsVC(navigator: self, presenter: presenter, screenType: screenType)
+        
+        view.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func showCXC_DetailedVC(view: UIViewController, screenType: ContentType, presenter: ModsModel_CXC, image: UIImageView, realm: DataBaseManager) {
         let vc = assembler.createDetailedVC_CXC(navigator: self, realm: realm, presenter: presenter, screenType: screenType, image: image)
         

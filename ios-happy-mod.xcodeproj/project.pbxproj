@@ -43,6 +43,10 @@
 		DAA0D0342B7198A0002E3397 /* CXC_ModsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D0322B7198A0002E3397 /* CXC_ModsVC.swift */; };
 		DAA0D0352B7198A0002E3397 /* CXC_ModsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAA0D0332B7198A0002E3397 /* CXC_ModsVC.xib */; };
 		DAA0D0372B7198BF002E3397 /* CXC_ModsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D0362B7198BF002E3397 /* CXC_ModsPresenter.swift */; };
+		DAB905E12BBDBF3500CC6C3C /* TopicsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB905DF2BBDBF3500CC6C3C /* TopicsVC.swift */; };
+		DAB905E22BBDBF3500CC6C3C /* TopicsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAB905E02BBDBF3500CC6C3C /* TopicsVC.xib */; };
+		DAB905EB2BBDDDD400CC6C3C /* TopicPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB905EA2BBDDDD400CC6C3C /* TopicPresenter.swift */; };
+		DAB905ED2BBE002E00CC6C3C /* TopicsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB905EC2BBE002E00CC6C3C /* TopicsCell.swift */; };
 		DAC0714A2BB3572A007DEBBA /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC071492BB3572A007DEBBA /* NotificationService.swift */; };
 		DAC0714E2BB3572A007DEBBA /* PushwooshCenter.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DAC071472BB3572A007DEBBA /* PushwooshCenter.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DAC071552BB35954007DEBBA /* Configurations_REFACTOR.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC071532BB35954007DEBBA /* Configurations_REFACTOR.swift */; };
@@ -254,6 +258,10 @@
 		DAA0D0322B7198A0002E3397 /* CXC_ModsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXC_ModsVC.swift; sourceTree = "<group>"; };
 		DAA0D0332B7198A0002E3397 /* CXC_ModsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CXC_ModsVC.xib; sourceTree = "<group>"; };
 		DAA0D0362B7198BF002E3397 /* CXC_ModsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXC_ModsPresenter.swift; sourceTree = "<group>"; };
+		DAB905DF2BBDBF3500CC6C3C /* TopicsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsVC.swift; sourceTree = "<group>"; };
+		DAB905E02BBDBF3500CC6C3C /* TopicsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopicsVC.xib; sourceTree = "<group>"; };
+		DAB905EA2BBDDDD400CC6C3C /* TopicPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicPresenter.swift; sourceTree = "<group>"; };
+		DAB905EC2BBE002E00CC6C3C /* TopicsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsCell.swift; sourceTree = "<group>"; };
 		DAC071472BB3572A007DEBBA /* PushwooshCenter.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PushwooshCenter.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC071492BB3572A007DEBBA /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		DAC0714B2BB3572A007DEBBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -551,6 +559,7 @@
 		DAA0D0132B715C93002E3397 /* CXC_Screens */ = {
 			isa = PBXGroup;
 			children = (
+				DAB905DE2BBDBEAE00CC6C3C /* TopicsVC */,
 				DA2C13BD2B93134200E57CE2 /* CXC_LoadingVC */,
 				DACB9C1E2B73604800D2B02D /* CXC_MenuVC */,
 				DACB9C172B73564300D2B02D /* CXC_DetailedVC */,
@@ -620,6 +629,25 @@
 				DACB9C262B73F34100D2B02D /* CXC_ModCell.xib */,
 			);
 			path = CXC_ModCell;
+			sourceTree = "<group>";
+		};
+		DAB905DE2BBDBEAE00CC6C3C /* TopicsVC */ = {
+			isa = PBXGroup;
+			children = (
+				DAB905E32BBDD47700CC6C3C /* TopicsCell */,
+				DAB905DF2BBDBF3500CC6C3C /* TopicsVC.swift */,
+				DAB905E02BBDBF3500CC6C3C /* TopicsVC.xib */,
+				DAB905EA2BBDDDD400CC6C3C /* TopicPresenter.swift */,
+			);
+			path = TopicsVC;
+			sourceTree = "<group>";
+		};
+		DAB905E32BBDD47700CC6C3C /* TopicsCell */ = {
+			isa = PBXGroup;
+			children = (
+				DAB905EC2BBE002E00CC6C3C /* TopicsCell.swift */,
+			);
+			path = TopicsCell;
 			sourceTree = "<group>";
 		};
 		DAC071482BB3572A007DEBBA /* Notification */ = {
@@ -1149,6 +1177,7 @@
 				DAFB7AD52BB3540200D6EF21 /* Localizable.strings in Resources */,
 				DAFB7AAC2BB3540200D6EF21 /* Localizable.strings in Resources */,
 				DAFB7A962BB3540200D6EF21 /* phone7.mp4 in Resources */,
+				DAB905E22BBDBF3500CC6C3C /* TopicsVC.xib in Resources */,
 				DAA0D0092B715A9C002E3397 /* LaunchScreen.storyboard in Resources */,
 				DAFB7ABC2BB3540200D6EF21 /* Localizable.strings in Resources */,
 				DAFB7ACB2BB3540200D6EF21 /* Localizable.strings in Resources */,
@@ -1207,6 +1236,7 @@
 				DA5FA7402BA0B7EE000E7A44 /* CXC_Data_Extension.swift in Sources */,
 				DAA0D01D2B716001002E3397 /* CXC_Navigator.swift in Sources */,
 				DAFB7A9F2BB3540200D6EF21 /* ReusableCell.swift in Sources */,
+				DAB905E12BBDBF3500CC6C3C /* TopicsVC.swift in Sources */,
 				DA2C13A42B8E8E3800E57CE2 /* CXC_ModsModel.swift in Sources */,
 				DA5FA73E2BA0B7B2000E7A44 /* CXC_Codable.swift in Sources */,
 				DACB9C1A2B73569800D2B02D /* CXC_DetailedVC.swift in Sources */,
@@ -1220,6 +1250,7 @@
 				DACB9C1D2B7356CA00D2B02D /* CXC_DetailedPresenter.swift in Sources */,
 				DA2C13C02B9313E000E57CE2 /* LoadingVC_CXCViewController.swift in Sources */,
 				DADDD0752BBB4523003A05B3 /* InternetManager.swift in Sources */,
+				DAB905EB2BBDDDD400CC6C3C /* TopicPresenter.swift in Sources */,
 				DAA0D0042B715A9B002E3397 /* ios_happy_mod.xcdatamodeld in Sources */,
 				DAFB7A852BB3540200D6EF21 /* ServicesManager.swift in Sources */,
 				DAA0D01F2B71603A002E3397 /* CXC_Assembler.swift in Sources */,
@@ -1245,6 +1276,7 @@
 				DAA0CFFC2B715A9B002E3397 /* CXC_SceneDelegate.swift in Sources */,
 				DAFB7A9D2BB3540200D6EF21 /* PremiumMainController.swift in Sources */,
 				DA2C13B22B8FAE1300E57CE2 /* CXC_Closure_Extension.swift in Sources */,
+				DAB905ED2BBE002E00CC6C3C /* TopicsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

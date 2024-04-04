@@ -12,6 +12,12 @@ class CXC_Assembler {
         return vc
     }
     
+    func createTopicsVC(navigator: CXC_Navigator, presenter: ModsModel_CXC, screenType: ContentType) -> UIViewController {
+        let presenter = TopicPresenter(navigator: navigator, topic: presenter, screenType: screenType)
+        let vc = TopicsVC(presenter: presenter)
+        return vc
+    }
+    
     func createCXC_GameList(navigator: CXC_Navigator, dropBox: CXC_Dropbox, screenType: ContentType) -> UIViewController {
         let presenter = CXC_GamesListPresenter(navigator: navigator, realm: realm, secreenType: screenType)
         let vc = CXC_GamesListViewController(presenter: presenter)

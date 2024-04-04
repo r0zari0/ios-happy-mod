@@ -48,6 +48,7 @@ class ModsType: Object, Codable {
     @Persisted(primaryKey: true) var name: String = ""
     @Persisted var mods = List<ModsModel_CXC>()
     
+    
     override init() {
         super.init()
     }

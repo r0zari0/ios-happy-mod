@@ -19,7 +19,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CXC_DetailedVC" customModule="ios_happy_mod" customModuleProvider="target">
             <connections>
                 <outlet property="CXC_BackButton" destination="MTd-jB-3kb" id="2HT-0k-6rZ"/>
-                <outlet property="CXC_DownloadButton" destination="EXW-xC-gLF" id="XKR-Za-d4u"/>
+                <outlet property="CXC_DownloadButton" destination="EXW-xC-gLF" id="FKv-Jy-TKz"/>
                 <outlet property="CXC_ModImage" destination="XUj-QD-oIV" id="7RS-MC-0vT"/>
                 <outlet property="CXC_NameLabel" destination="Jn5-ek-fxk" id="rax-b7-OBB"/>
                 <outlet property="CXC_TextView" destination="zSr-O4-FYs" id="FJg-C5-xd3"/>
@@ -80,7 +80,7 @@
                                 <color key="baseBackgroundColor" name="GreenColor"/>
                             </buttonConfiguration>
                             <connections>
-                                <action selector="downloadActionButton:" destination="-1" eventType="touchUpInside" id="nxS-FX-kjH"/>
+                                <action selector="downloadActionButton:" destination="-1" eventType="touchUpInside" id="igf-o8-iLc"/>
                             </connections>
                         </button>
                     </subviews>

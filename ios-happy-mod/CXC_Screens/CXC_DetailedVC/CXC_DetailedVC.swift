@@ -31,7 +31,6 @@ class CXC_DetailedVC: UIViewController {
         super.viewDidLoad()
         setupMyUI_CXC()
         presenter.setContent(presenter.content)
-        print("🥘", presenter.content.filePath)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -73,16 +72,24 @@ class CXC_DetailedVC: UIViewController {
     
     @IBAction func downloadActionButton(_ sender: Any) {
         getFilePath(content: presenter.content, contentType: presenter.screenType) { filePath in
-            if let filePath = filePath {
-                print("🥓", filePath)
-            } else {
-                print(String(describing: filePath))
+                if let filePath = filePath {
+                    print("🥓", filePath)
+                    self.downloadFile(from: filePath) { success, destinationURL in
+                        if success {
+                            print("File downloaded successfully:", destinationURL)
+                        } else {
+                            print("🍟 Failed")
+                        }
+                    }
+                } else {
+                    print(String(describing: filePath))
+                }
             }
-        }
     }
 }
 
 extension CXC_DetailedVC {
+    
     func getFilePath(content: ModsModel_CXC, contentType: ContentType, completion: @escaping (String?) -> Void) {
         CXC_ModImage.showActivityIndicator()
         
@@ -101,4 +108,33 @@ extension CXC_DetailedVC {
             }
         }
     }
+    
+    func downloadFile(from url: String, completionHandler: @escaping (Bool, URL?) -> Void) {
+        guard let fileURL = URL(string: url) else {
+            print("Invalid file URL")
+            completionHandler(false, nil)
+            return
+        }
+        
+        URLSession.shared.dataTask(with: fileURL) { data, response, error in
+            guard let data = data, error == nil else {
+                print("Failed to download file:", error ?? "Unknown error")
+                completionHandler(false, nil)
+                return
+            }
+            
+            if let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+                let destinationURL = documentsDirectory.appendingPathComponent(fileURL.lastPathComponent)
+                
+                do {
+                    try data.write(to: destinationURL)
+                    print("File downloaded successfully:", destinationURL)
+                    completionHandler(true, destinationURL)
+                } catch {
+                    print("Failed to save file:", error)
+                    completionHandler(false, nil)
+                }
+            }
+        }.resume()
+       }
 }
