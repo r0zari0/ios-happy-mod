@@ -141,7 +141,7 @@ class ModsModel_CXC: Object, Codable {
         super.init()
     }
     
-    convenience init(isFavorite: Bool, contentType: Int, name: String, modDescription: String, image: String, filePath: String, new: Bool, top: Bool, lastAdded: Bool, topicmodvariant: [TopicModVariant]) {
+    convenience init(isFavorite: Bool, contentType: Int, name: String, modDescription: String, image: String, filePath: String, new: Bool, top: Bool, lastAdded: Bool, topicmodvariant: [TopicModVariant] = []) {
         self.init()
         self.isFavorite = isFavorite
         self.contentType = contentType
@@ -218,7 +218,7 @@ class ModsModel_CXC: Object, Codable {
         }
         
         if let variants = try? containerTopics.decode([TopicModVariant].self, forKey: .topicmodvariant) {
-                    self.topicmodvariant.append(objectsIn: variants)
+            self.topicmodvariant.append(objectsIn: variants)
                 }
     }
 }

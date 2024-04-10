@@ -20,32 +20,38 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                         Configurations_REFACTOR.unlockerFourSubscriptionID,
                         Configurations_REFACTOR.unlockerFiveSubscriptionID]
         
-        IAPManager.shared.validateSubscriptions_REFACTOR(productIdentifiers: products) { result in
-            if let userHaveSub = result[Configurations_REFACTOR.mainSubscriptionID] {
-                switch userHaveSub {
-                case true:
-                    let vc = LoadingVC_CXCViewController()
-                    let navController = UINavigationController(rootViewController: vc)
-                    navController.modalPresentationStyle = .fullScreen
-                    window.rootViewController = navController
-                    window.makeKeyAndVisible()
-                case false:
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
-                        let unsubscribedVC = PremiumMainController()
-                        unsubscribedVC.modalPresentationStyle = .fullScreen
-                        window.rootViewController = unsubscribedVC
-                        window.makeKeyAndVisible()
-                    })
-                }
-            } else {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
-                    let unsubscribedVC = PremiumMainController()
-                    unsubscribedVC.modalPresentationStyle = .fullScreen
-                    window.rootViewController = unsubscribedVC
-                    window.makeKeyAndVisible()
-                })
-            }
-        }
+        let vc = LoadingVC_CXCViewController()
+        let navController = UINavigationController(rootViewController: vc)
+        navController.modalPresentationStyle = .fullScreen
+        window.rootViewController = navController
+        window.makeKeyAndVisible()
+        
+//        IAPManager.shared.validateSubscriptions_REFACTOR(productIdentifiers: products) { result in
+//            if let userHaveSub = result[Configurations_REFACTOR.mainSubscriptionID] {
+//                switch userHaveSub {
+//                case true:
+//                    let vc = LoadingVC_CXCViewController()
+//                    let navController = UINavigationController(rootViewController: vc)
+//                    navController.modalPresentationStyle = .fullScreen
+//                    window.rootViewController = navController
+//                    window.makeKeyAndVisible()
+//                case false:
+//                    DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+//                        let unsubscribedVC = PremiumMainController()
+//                        unsubscribedVC.modalPresentationStyle = .fullScreen
+//                        window.rootViewController = unsubscribedVC
+//                        window.makeKeyAndVisible()
+//                    })
+//                }
+//            } else {
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+//                    let unsubscribedVC = PremiumMainController()
+//                    unsubscribedVC.modalPresentationStyle = .fullScreen
+//                    window.rootViewController = unsubscribedVC
+//                    window.makeKeyAndVisible()
+//                })
+//            }
+//        }
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {

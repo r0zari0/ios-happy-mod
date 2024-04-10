@@ -12,8 +12,8 @@ class CXC_Assembler {
         return vc
     }
     
-    func createTopicsVC(navigator: CXC_Navigator, presenter: ModsModel_CXC, screenType: ContentType) -> UIViewController {
-        let presenter = TopicPresenter(navigator: navigator, topic: presenter, screenType: screenType)
+    func createTopicsVC(navigator: CXC_Navigator, presenter: ModsModel_CXC, screenType: ContentType, image: UIImageView) -> UIViewController {
+        let presenter = TopicPresenter(navigator: navigator, topic: presenter, screenType: screenType, image: image)
         let vc = TopicsVC(presenter: presenter)
         return vc
     }
@@ -60,4 +60,11 @@ class CXC_Assembler {
         vc.productBuy = productType
         return vc
     }
+    
+    func myAlert(text: String, alertType: AlertType) -> UIViewController {
+        let vc = AlertViewController(text: text, alertType: alertType)
+        return vc
+    }
 }
+
+

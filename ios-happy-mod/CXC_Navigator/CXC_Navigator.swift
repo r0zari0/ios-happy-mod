@@ -21,8 +21,8 @@ class CXC_Navigator {
         view.navigationController?.pushViewController(vc, animated: true)
     }
     
-    func showTopicsVC(view: UIViewController, screenType: ContentType, presenter: ModsModel_CXC) {
-        let vc = assembler.createTopicsVC(navigator: self, presenter: presenter, screenType: screenType)
+    func showTopicsVC(view: UIViewController, screenType: ContentType, presenter: ModsModel_CXC, image: UIImageView) {
+        let vc = assembler.createTopicsVC(navigator: self, presenter: presenter, screenType: screenType, image: image)
         
         view.navigationController?.pushViewController(vc, animated: true)
     }
@@ -42,5 +42,17 @@ class CXC_Navigator {
     func showPremiumMainController(view: UIViewController, productType: PremiumMainControllerStyle) {
         let vc = assembler.createPremiumMainController(productType: productType)
         view.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func showAlert(view: UIViewController, text: String, alertType: AlertType) {
+        let vc = assembler.myAlert(text: text, alertType: alertType)
+        vc.modalPresentationStyle = .fullScreen
+        view.present(vc, animated: true)
+    }
+    
+    func dismissAlert() {
+        if let presentedVC = UIApplication.shared.keyWindow?.rootViewController?.presentedViewController {
+            presentedVC.dismiss(animated: true, completion: nil)
+        }
     }
 }

@@ -39,4 +39,8 @@ class CXC_ModsPresenter {
         
         navigator.showCXC_DetailedVC(view: view, screenType: screenType, presenter: presenter, image: image, realm: realm)
     }
+    
+    func showTopicsVC(view: UIViewController, indexPath: Int, screenType: ContentType, presenter: ModsModel_CXC, image: UIImageView) {
+        navigator.showTopicsVC(view: view, screenType: screenType, presenter: presenter, image: image)
+    }
 }

@@ -25,6 +25,12 @@
 		DA5FA7492BA0F514000E7A44 /* Resolver-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = DA5FA7482BA0F514000E7A44 /* Resolver-Dynamic */; };
 		DA5FA74B2BA0F514000E7A44 /* Resolver-Static in Frameworks */ = {isa = PBXBuildFile; productRef = DA5FA74A2BA0F514000E7A44 /* Resolver-Static */; };
 		DA5FA74E2BA117FE000E7A44 /* Keys_CXC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5FA74D2BA117FE000E7A44 /* Keys_CXC.swift */; };
+		DA6F4BEF2BBF87AC00068CF7 /* TopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA6F4BEE2BBF87AC00068CF7 /* TopicCell.xib */; };
+		DA6F4BF02BBF87AC00068CF7 /* TopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F4BED2BBF87AC00068CF7 /* TopicCell.swift */; };
+		DA6F4BF52BC09A6A00068CF7 /* AlertVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA6F4BF42BC09A6A00068CF7 /* AlertVCViewController.xib */; };
+		DA6F4BF62BC09A6A00068CF7 /* AlertVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F4BF32BC09A6A00068CF7 /* AlertVCViewController.swift */; };
+		DA6F4C0C2BC23C6000068CF7 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F4C0A2BC23C6000068CF7 /* AlertViewController.swift */; };
+		DA6F4C0D2BC23C6000068CF7 /* AlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA6F4C0B2BC23C6000068CF7 /* AlertViewController.xib */; };
 		DA70A2EA2B7C0C9A00B70071 /* SwiftyDropbox in Frameworks */ = {isa = PBXBuildFile; productRef = DA70A2E92B7C0C9A00B70071 /* SwiftyDropbox */; };
 		DA70A2ED2B7C187E00B70071 /* DropBoxKeys_CXC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA70A2EC2B7C187E00B70071 /* DropBoxKeys_CXC.swift */; };
 		DAA0CFFA2B715A9B002E3397 /* CXC_AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0CFF92B715A9B002E3397 /* CXC_AppDelegate.swift */; };
@@ -46,7 +52,6 @@
 		DAB905E12BBDBF3500CC6C3C /* TopicsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB905DF2BBDBF3500CC6C3C /* TopicsVC.swift */; };
 		DAB905E22BBDBF3500CC6C3C /* TopicsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAB905E02BBDBF3500CC6C3C /* TopicsVC.xib */; };
 		DAB905EB2BBDDDD400CC6C3C /* TopicPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB905EA2BBDDDD400CC6C3C /* TopicPresenter.swift */; };
-		DAB905ED2BBE002E00CC6C3C /* TopicsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB905EC2BBE002E00CC6C3C /* TopicsCell.swift */; };
 		DAC0714A2BB3572A007DEBBA /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC071492BB3572A007DEBBA /* NotificationService.swift */; };
 		DAC0714E2BB3572A007DEBBA /* PushwooshCenter.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DAC071472BB3572A007DEBBA /* PushwooshCenter.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DAC071552BB35954007DEBBA /* Configurations_REFACTOR.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC071532BB35954007DEBBA /* Configurations_REFACTOR.swift */; };
@@ -239,6 +244,12 @@
 		DA5FA73F2BA0B7EE000E7A44 /* CXC_Data_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXC_Data_Extension.swift; sourceTree = "<group>"; };
 		DA5FA7432BA0D023000E7A44 /* View+ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+ActivityIndicator.swift"; sourceTree = "<group>"; };
 		DA5FA74D2BA117FE000E7A44 /* Keys_CXC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys_CXC.swift; sourceTree = "<group>"; };
+		DA6F4BED2BBF87AC00068CF7 /* TopicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicCell.swift; sourceTree = "<group>"; };
+		DA6F4BEE2BBF87AC00068CF7 /* TopicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopicCell.xib; sourceTree = "<group>"; };
+		DA6F4BF32BC09A6A00068CF7 /* AlertVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertVCViewController.swift; sourceTree = "<group>"; };
+		DA6F4BF42BC09A6A00068CF7 /* AlertVCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertVCViewController.xib; sourceTree = "<group>"; };
+		DA6F4C0A2BC23C6000068CF7 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		DA6F4C0B2BC23C6000068CF7 /* AlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertViewController.xib; sourceTree = "<group>"; };
 		DA70A2EC2B7C187E00B70071 /* DropBoxKeys_CXC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropBoxKeys_CXC.swift; sourceTree = "<group>"; };
 		DAA0CFF62B715A9B002E3397 /* ios-happy-mod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-happy-mod.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA0CFF92B715A9B002E3397 /* CXC_AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXC_AppDelegate.swift; sourceTree = "<group>"; };
@@ -261,7 +272,6 @@
 		DAB905DF2BBDBF3500CC6C3C /* TopicsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsVC.swift; sourceTree = "<group>"; };
 		DAB905E02BBDBF3500CC6C3C /* TopicsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopicsVC.xib; sourceTree = "<group>"; };
 		DAB905EA2BBDDDD400CC6C3C /* TopicPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicPresenter.swift; sourceTree = "<group>"; };
-		DAB905EC2BBE002E00CC6C3C /* TopicsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsCell.swift; sourceTree = "<group>"; };
 		DAC071472BB3572A007DEBBA /* PushwooshCenter.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PushwooshCenter.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC071492BB3572A007DEBBA /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		DAC0714B2BB3572A007DEBBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -486,6 +496,24 @@
 			path = Keys_CXC;
 			sourceTree = "<group>";
 		};
+		DA6F4BF22BC09A2C00068CF7 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				DA6F4BF32BC09A6A00068CF7 /* AlertVCViewController.swift */,
+				DA6F4BF42BC09A6A00068CF7 /* AlertVCViewController.xib */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		DA6F4C092BC23C0100068CF7 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				DA6F4C0A2BC23C6000068CF7 /* AlertViewController.swift */,
+				DA6F4C0B2BC23C6000068CF7 /* AlertViewController.xib */,
+			);
+			path = Alerts;
+			sourceTree = "<group>";
+		};
 		DA70A2EB2B7C182500B70071 /* CXC_Manager */ = {
 			isa = PBXGroup;
 			children = (
@@ -559,6 +587,8 @@
 		DAA0D0132B715C93002E3397 /* CXC_Screens */ = {
 			isa = PBXGroup;
 			children = (
+				DA6F4C092BC23C0100068CF7 /* Alerts */,
+				DA6F4BF22BC09A2C00068CF7 /* Alert */,
 				DAB905DE2BBDBEAE00CC6C3C /* TopicsVC */,
 				DA2C13BD2B93134200E57CE2 /* CXC_LoadingVC */,
 				DACB9C1E2B73604800D2B02D /* CXC_MenuVC */,
@@ -645,7 +675,8 @@
 		DAB905E32BBDD47700CC6C3C /* TopicsCell */ = {
 			isa = PBXGroup;
 			children = (
-				DAB905EC2BBE002E00CC6C3C /* TopicsCell.swift */,
+				DA6F4BED2BBF87AC00068CF7 /* TopicCell.swift */,
+				DA6F4BEE2BBF87AC00068CF7 /* TopicCell.xib */,
 			);
 			path = TopicsCell;
 			sourceTree = "<group>";
@@ -1135,6 +1166,7 @@
 				DAFB7A902BB3540200D6EF21 /* phone.mp4 in Resources */,
 				DAFB7A882BB3540200D6EF21 /* Media.xcassets in Resources */,
 				DAFB7A892BB3540200D6EF21 /* pad.mp4 in Resources */,
+				DA6F4BEF2BBF87AC00068CF7 /* TopicCell.xib in Resources */,
 				DAFB7AAD2BB3540200D6EF21 /* Localizable.strings in Resources */,
 				DAA0D0352B7198A0002E3397 /* CXC_ModsVC.xib in Resources */,
 				DAFB79F62BB344F000D6EF21 /* sub.ttf in Resources */,
@@ -1158,6 +1190,7 @@
 				DAFB7A872BB3540200D6EF21 /* FontsFree-Net-SFProDisplay-Regular.ttf in Resources */,
 				DAFB7A8D2BB3540200D6EF21 /* pad5.mp4 in Resources */,
 				DAFB7ACA2BB3540200D6EF21 /* Localizable.strings in Resources */,
+				DA6F4BF52BC09A6A00068CF7 /* AlertVCViewController.xib in Resources */,
 				DA2C13C12B9313E000E57CE2 /* LoadingVC_CXCViewController.xib in Resources */,
 				DAFB7AA02BB3540200D6EF21 /* ReusableCell.xib in Resources */,
 				DAFB7AC12BB3540200D6EF21 /* Localizable.strings in Resources */,
@@ -1176,6 +1209,7 @@
 				DAFB7ACC2BB3540200D6EF21 /* Localizable.strings in Resources */,
 				DAFB7AD52BB3540200D6EF21 /* Localizable.strings in Resources */,
 				DAFB7AAC2BB3540200D6EF21 /* Localizable.strings in Resources */,
+				DA6F4C0D2BC23C6000068CF7 /* AlertViewController.xib in Resources */,
 				DAFB7A962BB3540200D6EF21 /* phone7.mp4 in Resources */,
 				DAB905E22BBDBF3500CC6C3C /* TopicsVC.xib in Resources */,
 				DAA0D0092B715A9C002E3397 /* LaunchScreen.storyboard in Resources */,
@@ -1248,12 +1282,15 @@
 				DAFB7AD62BB3540200D6EF21 /* validateLocalizable.swift in Sources */,
 				DA2C13B82B8FB3D000E57CE2 /* CXC_HTTP.swift in Sources */,
 				DACB9C1D2B7356CA00D2B02D /* CXC_DetailedPresenter.swift in Sources */,
+				DA6F4BF62BC09A6A00068CF7 /* AlertVCViewController.swift in Sources */,
 				DA2C13C02B9313E000E57CE2 /* LoadingVC_CXCViewController.swift in Sources */,
 				DADDD0752BBB4523003A05B3 /* InternetManager.swift in Sources */,
 				DAB905EB2BBDDDD400CC6C3C /* TopicPresenter.swift in Sources */,
 				DAA0D0042B715A9B002E3397 /* ios_happy_mod.xcdatamodeld in Sources */,
+				DA6F4C0C2BC23C6000068CF7 /* AlertViewController.swift in Sources */,
 				DAFB7A852BB3540200D6EF21 /* ServicesManager.swift in Sources */,
 				DAA0D01F2B71603A002E3397 /* CXC_Assembler.swift in Sources */,
+				DA6F4BF02BBF87AC00068CF7 /* TopicCell.swift in Sources */,
 				DA5FA7392BA0AE2F000E7A44 /* CXC_DataHTTP.swift in Sources */,
 				DA2C13B52B8FAF5C00E57CE2 /* CXC_APIError.swift in Sources */,
 				DA5FA7442BA0D023000E7A44 /* View+ActivityIndicator.swift in Sources */,
@@ -1276,7 +1313,6 @@
 				DAA0CFFC2B715A9B002E3397 /* CXC_SceneDelegate.swift in Sources */,
 				DAFB7A9D2BB3540200D6EF21 /* PremiumMainController.swift in Sources */,
 				DA2C13B22B8FAE1300E57CE2 /* CXC_Closure_Extension.swift in Sources */,
-				DAB905ED2BBE002E00CC6C3C /* TopicsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

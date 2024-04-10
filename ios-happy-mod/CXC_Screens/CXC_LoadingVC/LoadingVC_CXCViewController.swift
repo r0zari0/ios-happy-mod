@@ -29,7 +29,7 @@ enum ContentType: Int, CaseIterable {
 
 class LoadingVC_CXCViewController: UIViewController {
     
-    @IBOutlet weak var laodingIndicator: UIActivityIndicatorView!
+//    @IBOutlet weak var laodingIndicator: UIActivityIndicatorView!
     
     let dropBox = CXC_Dropbox.shared
     let navigator = CXC_Navigator.shared
@@ -46,9 +46,10 @@ class LoadingVC_CXCViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: false)
-        self.view.backgroundColor = .white
+//        self.view.backgroundColor = .white
         
-        laodingIndicator.startAnimating()
+        navigator.showAlert(view: self, text: "Loading...", alertType: .noButton)
+//        laodingIndicator.startAnimating()
         getAllData()
     }
 }
@@ -63,13 +64,14 @@ extension LoadingVC_CXCViewController {
         allTypes.forEach { type in
             dispatchGroup.enter()
             getData(type: type) {
+                print(type.name)
                 dispatchGroup.leave()
             }
         }
-        
         dispatchGroup.notify(queue: .main) { [weak self] in
             guard let self else { return }
-            laodingIndicator.stopAnimating()
+//            laodingIndicator.stopAnimating()
+            navigator.dismissAlert()
             navigator.showCXC_GamesListVC(view: self, dropBox: dropBox, screenType: .games)
         }
     }
@@ -81,6 +83,9 @@ extension LoadingVC_CXCViewController {
                 
                 if let result = try? JSONDecoder().decode(ModsModelCodable.self, from: data) {
                     realmDB.saveModsTypes(types: result.types, contentType: type)
+                    print("🥶", result)
+                } else {
+                    print("👻")
                 }
                 
                 completion()

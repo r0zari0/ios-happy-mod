@@ -121,11 +121,16 @@ extension CXC_ModsVC: UICollectionViewDataSource, UICollectionViewDelegate, UICo
             guard let self, let index = self.presenter.mods.firstIndex(where: { $0 === item }) else {
                 return
             }
-            self.presenter.showDetaildVC(view: self,
-                                         indexPath: index,
-                                         screenType: self.presenter.screenType,
-                                         presenter: item,
-                                         image: cell.CXC_ModImage)
+            
+            if presenter.screenType == .topics {
+                self.presenter.navigator.showTopicsVC(view: self, screenType: self.presenter.screenType, presenter: item, image: cell.CXC_ModImage)
+            } else {
+                self.presenter.showDetaildVC(view: self,
+                                             indexPath: index,
+                                             screenType: self.presenter.screenType,
+                                             presenter: item,
+                                             image: cell.CXC_ModImage)
+            }
         }
         
         cell.saveButtonActionClosure = { [ weak self] in

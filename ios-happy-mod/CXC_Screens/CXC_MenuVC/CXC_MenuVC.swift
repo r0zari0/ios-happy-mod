@@ -70,7 +70,8 @@ extension CXC_MenuVC {
         
         switch sender {
         case CXC_GamesButton:
-            self.presenter.navigator.showCXC_GamesListVC(view: self, dropBox: dropBox, screenType: .games)
+            self.presenter.navigator.showAlert(view: self, text: "hello maxim", alertType: .withButton)
+//            self.presenter.navigator.showCXC_GamesListVC(view: self, dropBox: dropBox, screenType: .games)
         case CXC_AppsButton:
             self.presenter.navigator.showCXC_GamesListVC(view: self, dropBox: dropBox, screenType: .apps)
         case CXC_TopicsButton:

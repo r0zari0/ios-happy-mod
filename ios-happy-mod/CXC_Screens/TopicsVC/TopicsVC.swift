@@ -2,12 +2,14 @@ import SwiftUI
 import UIKit
 
 class TopicsVC: UIViewController {
-
+    
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var backButton: UIButton!
     
     @IBOutlet weak var topicImage: UIImageView!
+    
+    @IBOutlet weak var backView: UIView!
     
     @IBOutlet weak var topicName: UILabel!
     
@@ -31,9 +33,21 @@ class TopicsVC: UIViewController {
         setupCollectionView()
         setupUI()
     }
+    
     func setupUI() {
         titleLabel.text = "Topics"
-        presenter.setTopic(presenter.topic)
+        
+        topicImage.layer.cornerRadius = 14
+        backView.layer.cornerRadius = 16
+        
+        backView.backgroundColor = .lightGreen
+        
+        topicImage.image = presenter.image.image
+        
+        topicName.text = presenter.topic.name
+        topicDescription.text = presenter.topic.modDescription
+        
+        presenter.setTopic(topic: presenter.topic)
     }
     
     func setupCollectionView() {
@@ -41,33 +55,34 @@ class TopicsVC: UIViewController {
         
         layout.scrollDirection = .vertical
         
+        topicsCollectionView.showsHorizontalScrollIndicator = false
+        
         topicsCollectionView.delegate = self
         topicsCollectionView.dataSource = self
         
-        topicsCollectionView.register(CustomCollectionViewCell.self, forCellWithReuseIdentifier: String(describing: CustomCollectionViewCell.self))
+        topicsCollectionView.register(.init(nibName: String(describing: TopicCell.self), bundle: nil), forCellWithReuseIdentifier: String(describing: TopicCell.self))
     }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            let width: CGFloat = 220
-            let height: CGFloat = 200
-            return CGSize(width: width, height: height)
-        }
     
     @IBAction func backButtonAction(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
-
+        
     }
 }
 
 extension TopicsVC: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
+    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         presenter.topics.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: CustomCollectionViewCell.self), for: indexPath) as? CustomCollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: TopicCell.self), for: indexPath) as? TopicCell else {
             return UICollectionViewCell()
         }
+        cell.config()
         
         return cell
     }

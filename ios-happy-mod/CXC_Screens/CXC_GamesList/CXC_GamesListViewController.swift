@@ -137,7 +137,6 @@ extension CXC_GamesListViewController: UITableViewDelegate, UITableViewDataSourc
         self.present(vc, animated: true)
     }
     private func isLocked(index: Int) -> Bool {
-        // Проверяем блокировку модов, учитывая актуальные данные после фильтрации
         guard index < presenter.mods.count else {
             return false
         }

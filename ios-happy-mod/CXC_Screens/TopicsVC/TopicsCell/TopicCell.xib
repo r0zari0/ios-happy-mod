@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TopicCell" customModule="ios_happy_mod" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="324" height="315"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="324" height="315"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Je-J4-y4x">
+                        <rect key="frame" x="12" y="0.0" width="300" height="263"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Qs-3Q-NGc">
+                        <rect key="frame" x="12" y="271" width="300" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="aos-Xo-bCi"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="filled" title="Button">
+                            <color key="baseBackgroundColor" name="myGreen"/>
+                        </buttonConfiguration>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7F8-ci-glt">
+                        <rect key="frame" x="256" y="211" width="44" height="44"/>
+                        <color key="backgroundColor" name="myGreen"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="aR6-eu-4JK"/>
+                            <constraint firstAttribute="width" constant="44" id="wkJ-ya-VVg"/>
+                        </constraints>
+                        <color key="tintColor" name="myGreen"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="filled" image="saved">
+                            <color key="baseForegroundColor" name="myGreen"/>
+                            <color key="baseBackgroundColor" name="myGreen"/>
+                        </buttonConfiguration>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dbn-0Y-9TA">
+                        <rect key="frame" x="23.999999999999996" y="224.66666666666666" width="63.666666666666657" height="30.333333333333343"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hu6-kb-Y3h">
+                                <rect key="frame" x="12" y="5.6666666666666856" width="39.666666666666664" height="19.333333333333332"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="myGreen"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Hu6-kb-Y3h" secondAttribute="bottom" constant="5.5" id="64b-XJ-5HE"/>
+                            <constraint firstItem="Hu6-kb-Y3h" firstAttribute="leading" secondItem="Dbn-0Y-9TA" secondAttribute="leading" constant="12" id="9AV-ha-p5Q"/>
+                            <constraint firstItem="Hu6-kb-Y3h" firstAttribute="top" secondItem="Dbn-0Y-9TA" secondAttribute="top" constant="5.5" id="a2n-mQ-1Lw"/>
+                            <constraint firstAttribute="trailing" secondItem="Hu6-kb-Y3h" secondAttribute="trailing" constant="12" id="vdR-xJ-bu1"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="1Qs-3Q-NGc" firstAttribute="top" secondItem="2Je-J4-y4x" secondAttribute="bottom" constant="8" id="4JI-jG-EA1"/>
+                <constraint firstItem="2Je-J4-y4x" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="5A4-3u-FlR"/>
+                <constraint firstAttribute="trailingMargin" secondItem="7F8-ci-glt" secondAttribute="trailing" constant="8" id="7CZ-W2-woG"/>
+                <constraint firstAttribute="trailing" secondItem="2Je-J4-y4x" secondAttribute="trailing" constant="12" id="99V-bF-DYy"/>
+                <constraint firstAttribute="bottom" secondItem="1Qs-3Q-NGc" secondAttribute="bottom" id="GaL-QJ-dxK"/>
+                <constraint firstItem="7F8-ci-glt" firstAttribute="bottom" secondItem="2Je-J4-y4x" secondAttribute="bottom" constant="-8" id="M4b-zr-2Fk"/>
+                <constraint firstItem="1Qs-3Q-NGc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="Y2o-JW-FYj"/>
+                <constraint firstItem="2Je-J4-y4x" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="agV-CS-aRX"/>
+                <constraint firstAttribute="trailing" secondItem="1Qs-3Q-NGc" secondAttribute="trailing" constant="12" id="ncy-D5-OKM"/>
+                <constraint firstItem="Dbn-0Y-9TA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leadingMargin" constant="8" id="p8c-0Y-6Li"/>
+                <constraint firstItem="Dbn-0Y-9TA" firstAttribute="bottom" secondItem="2Je-J4-y4x" secondAttribute="bottom" constant="-8" id="z35-TN-nCV"/>
+            </constraints>
+            <size key="customSize" width="324" height="315"/>
+            <connections>
+                <outlet property="saveButton" destination="7F8-ci-glt" id="IVw-aQ-ISD"/>
+                <outlet property="topicImage" destination="2Je-J4-y4x" id="kBD-56-zzL"/>
+                <outlet property="unpackingButton" destination="1Qs-3Q-NGc" id="dwe-Tz-A4E"/>
+                <outlet property="versionLabel" destination="Hu6-kb-Y3h" id="BAC-fd-aY9"/>
+                <outlet property="versionView" destination="Dbn-0Y-9TA" id="x6V-5R-2tJ"/>
+            </connections>
+            <point key="canvasLocation" x="100.76335877862596" y="58.802816901408455"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="saved" width="24" height="24"/>
+        <namedColor name="myGreen">
+            <color red="0.41999998688697815" green="0.70999997854232788" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
