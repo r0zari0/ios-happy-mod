@@ -29,6 +29,9 @@
                         <buttonConfiguration key="configuration" style="filled" title="Button">
                             <color key="baseBackgroundColor" name="myGreen"/>
                         </buttonConfiguration>
+                        <connections>
+                            <action selector="unpackingButtonAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="a7C-En-iML"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7F8-ci-glt">
                         <rect key="frame" x="256" y="211" width="44" height="44"/>

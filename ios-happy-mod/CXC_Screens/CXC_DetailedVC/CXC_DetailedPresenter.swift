@@ -1,6 +1,7 @@
 
 import Foundation
 import UIKit
+import Photos
 
 class CXC_DetailedPresenter {
     

@@ -22,7 +22,7 @@ class CXC_ModCell: UICollectionViewCell {
         super.awakeFromNib()
         setupMyUI_CXC()
         
-        CXC_ModImage.image = UIImage(named: "placeholder_image")
+//        CXC_ModImage.image = UIImage(named: "placeholder_image")
     }
     
     func setupMyUI_CXC() {

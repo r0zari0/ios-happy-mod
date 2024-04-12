@@ -27,9 +27,9 @@ class CXC_ModsPresenter {
         realm.updateFavoriteStatus(mod: mod, isFavorite: !mod.isFavorite)
     }
     
-    func receivedData(_ mods: [ModsModel_CXC]) {
-        self.mods = mods
-    }
+//    func receivedData(_ mods: [ModsModel_CXC]) {
+//        self.mods = mods
+//    }
     
     func showMenu(vc: UIViewController) {
         navigator.showCXC_MenuVC(view: vc, selactedIndex: 0)

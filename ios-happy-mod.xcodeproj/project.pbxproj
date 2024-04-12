@@ -27,12 +27,11 @@
 		DA5FA74E2BA117FE000E7A44 /* Keys_CXC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5FA74D2BA117FE000E7A44 /* Keys_CXC.swift */; };
 		DA6F4BEF2BBF87AC00068CF7 /* TopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA6F4BEE2BBF87AC00068CF7 /* TopicCell.xib */; };
 		DA6F4BF02BBF87AC00068CF7 /* TopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F4BED2BBF87AC00068CF7 /* TopicCell.swift */; };
-		DA6F4BF52BC09A6A00068CF7 /* AlertVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA6F4BF42BC09A6A00068CF7 /* AlertVCViewController.xib */; };
-		DA6F4BF62BC09A6A00068CF7 /* AlertVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F4BF32BC09A6A00068CF7 /* AlertVCViewController.swift */; };
 		DA6F4C0C2BC23C6000068CF7 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6F4C0A2BC23C6000068CF7 /* AlertViewController.swift */; };
 		DA6F4C0D2BC23C6000068CF7 /* AlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA6F4C0B2BC23C6000068CF7 /* AlertViewController.xib */; };
 		DA70A2EA2B7C0C9A00B70071 /* SwiftyDropbox in Frameworks */ = {isa = PBXBuildFile; productRef = DA70A2E92B7C0C9A00B70071 /* SwiftyDropbox */; };
 		DA70A2ED2B7C187E00B70071 /* DropBoxKeys_CXC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA70A2EC2B7C187E00B70071 /* DropBoxKeys_CXC.swift */; };
+		DA9713F72BC73D2400E6091B /* ModsDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9713F62BC73D2400E6091B /* ModsDownloader.swift */; };
 		DAA0CFFA2B715A9B002E3397 /* CXC_AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0CFF92B715A9B002E3397 /* CXC_AppDelegate.swift */; };
 		DAA0CFFC2B715A9B002E3397 /* CXC_SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0CFFB2B715A9B002E3397 /* CXC_SceneDelegate.swift */; };
 		DAA0D0042B715A9B002E3397 /* ios_happy_mod.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DAA0D0022B715A9B002E3397 /* ios_happy_mod.xcdatamodeld */; };
@@ -246,11 +245,10 @@
 		DA5FA74D2BA117FE000E7A44 /* Keys_CXC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys_CXC.swift; sourceTree = "<group>"; };
 		DA6F4BED2BBF87AC00068CF7 /* TopicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicCell.swift; sourceTree = "<group>"; };
 		DA6F4BEE2BBF87AC00068CF7 /* TopicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopicCell.xib; sourceTree = "<group>"; };
-		DA6F4BF32BC09A6A00068CF7 /* AlertVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertVCViewController.swift; sourceTree = "<group>"; };
-		DA6F4BF42BC09A6A00068CF7 /* AlertVCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertVCViewController.xib; sourceTree = "<group>"; };
 		DA6F4C0A2BC23C6000068CF7 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		DA6F4C0B2BC23C6000068CF7 /* AlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertViewController.xib; sourceTree = "<group>"; };
 		DA70A2EC2B7C187E00B70071 /* DropBoxKeys_CXC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropBoxKeys_CXC.swift; sourceTree = "<group>"; };
+		DA9713F62BC73D2400E6091B /* ModsDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModsDownloader.swift; sourceTree = "<group>"; };
 		DAA0CFF62B715A9B002E3397 /* ios-happy-mod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-happy-mod.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA0CFF92B715A9B002E3397 /* CXC_AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXC_AppDelegate.swift; sourceTree = "<group>"; };
 		DAA0CFFB2B715A9B002E3397 /* CXC_SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CXC_SceneDelegate.swift; sourceTree = "<group>"; };
@@ -496,15 +494,6 @@
 			path = Keys_CXC;
 			sourceTree = "<group>";
 		};
-		DA6F4BF22BC09A2C00068CF7 /* Alert */ = {
-			isa = PBXGroup;
-			children = (
-				DA6F4BF32BC09A6A00068CF7 /* AlertVCViewController.swift */,
-				DA6F4BF42BC09A6A00068CF7 /* AlertVCViewController.xib */,
-			);
-			path = Alert;
-			sourceTree = "<group>";
-		};
 		DA6F4C092BC23C0100068CF7 /* Alerts */ = {
 			isa = PBXGroup;
 			children = (
@@ -519,6 +508,7 @@
 			children = (
 				DA70A2EC2B7C187E00B70071 /* DropBoxKeys_CXC.swift */,
 				DADDD0742BBB4523003A05B3 /* InternetManager.swift */,
+				DA9713F62BC73D2400E6091B /* ModsDownloader.swift */,
 			);
 			path = CXC_Manager;
 			sourceTree = "<group>";
@@ -588,7 +578,6 @@
 			isa = PBXGroup;
 			children = (
 				DA6F4C092BC23C0100068CF7 /* Alerts */,
-				DA6F4BF22BC09A2C00068CF7 /* Alert */,
 				DAB905DE2BBDBEAE00CC6C3C /* TopicsVC */,
 				DA2C13BD2B93134200E57CE2 /* CXC_LoadingVC */,
 				DACB9C1E2B73604800D2B02D /* CXC_MenuVC */,
@@ -1190,7 +1179,6 @@
 				DAFB7A872BB3540200D6EF21 /* FontsFree-Net-SFProDisplay-Regular.ttf in Resources */,
 				DAFB7A8D2BB3540200D6EF21 /* pad5.mp4 in Resources */,
 				DAFB7ACA2BB3540200D6EF21 /* Localizable.strings in Resources */,
-				DA6F4BF52BC09A6A00068CF7 /* AlertVCViewController.xib in Resources */,
 				DA2C13C12B9313E000E57CE2 /* LoadingVC_CXCViewController.xib in Resources */,
 				DAFB7AA02BB3540200D6EF21 /* ReusableCell.xib in Resources */,
 				DAFB7AC12BB3540200D6EF21 /* Localizable.strings in Resources */,
@@ -1273,6 +1261,7 @@
 				DAB905E12BBDBF3500CC6C3C /* TopicsVC.swift in Sources */,
 				DA2C13A42B8E8E3800E57CE2 /* CXC_ModsModel.swift in Sources */,
 				DA5FA73E2BA0B7B2000E7A44 /* CXC_Codable.swift in Sources */,
+				DA9713F72BC73D2400E6091B /* ModsDownloader.swift in Sources */,
 				DACB9C1A2B73569800D2B02D /* CXC_DetailedVC.swift in Sources */,
 				DACB9C212B73606400D2B02D /* CXC_MenuVC.swift in Sources */,
 				DACB980C2B9A4C8D004384C4 /* Dinamic.swift in Sources */,
@@ -1282,7 +1271,6 @@
 				DAFB7AD62BB3540200D6EF21 /* validateLocalizable.swift in Sources */,
 				DA2C13B82B8FB3D000E57CE2 /* CXC_HTTP.swift in Sources */,
 				DACB9C1D2B7356CA00D2B02D /* CXC_DetailedPresenter.swift in Sources */,
-				DA6F4BF62BC09A6A00068CF7 /* AlertVCViewController.swift in Sources */,
 				DA2C13C02B9313E000E57CE2 /* LoadingVC_CXCViewController.swift in Sources */,
 				DADDD0752BBB4523003A05B3 /* InternetManager.swift in Sources */,
 				DAB905EB2BBDDDD400CC6C3C /* TopicPresenter.swift in Sources */,

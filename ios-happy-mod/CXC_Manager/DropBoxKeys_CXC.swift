@@ -367,7 +367,6 @@ extension CXC_Dropbox {
             }
         }
 
-    
     func CXC_downloadDataWithCache(filePath: String) async throws -> Data? {
             if let cachedData = DataCache.instance.readData(forKey: filePath) {
                 return cachedData

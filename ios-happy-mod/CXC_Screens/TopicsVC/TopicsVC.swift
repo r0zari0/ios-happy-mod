@@ -74,15 +74,27 @@ extension TopicsVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
     }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        presenter.topics.count
+        return presenter.topic.topicmodvariant.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: TopicCell.self), for: indexPath) as? TopicCell else {
             return UICollectionViewCell()
         }
-        cell.config()
+        
+        let topicVariant = presenter.topic.topicmodvariant[indexPath.item]
+        cell.config(topic: topicVariant)
+        
+        cell.getImage(content: topicVariant, contentType: .topics)
+        cell.actionClosure = {
+            CXC_Navigator.shared.showCXC_DetailedVC(view: self,
+                                                    screenType: .topics,
+                                                    presenter: self.presenter.topic,
+                                                    image: cell.topicImage,
+                                                    realm: DataBaseManager.shared)
+        }
         
         return cell
     }

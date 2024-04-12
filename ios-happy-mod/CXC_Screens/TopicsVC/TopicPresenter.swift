@@ -3,10 +3,7 @@ import Foundation
 import UIKit
 
 class TopicPresenter {
-    
     var topic: ModsModel_CXC
-    
-    let topics: [String] = ["e", "w", "f", "f", "g"]
     
     let navigator: CXC_Navigator
     let screenType: ContentType

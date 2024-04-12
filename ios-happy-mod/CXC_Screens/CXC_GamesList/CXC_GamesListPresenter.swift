@@ -17,9 +17,9 @@ class CXC_GamesListPresenter {
         self.screenType = secreenType
     }
     
-    func receivedData(_ mods: [ModsType]) {
-        self.mods = mods
-    }
+//    func receivedData(_ mods: [ModsType]) {
+//        self.mods = mods
+//    }
     
     func showMenu(vc: UIViewController) {
         var index = 0

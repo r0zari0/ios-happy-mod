@@ -46,7 +46,7 @@ class CXC_Navigator {
     
     func showAlert(view: UIViewController, text: String, alertType: AlertType) {
         let vc = assembler.myAlert(text: text, alertType: alertType)
-        vc.modalPresentationStyle = .fullScreen
+        vc.modalPresentationStyle = .overFullScreen
         view.present(vc, animated: true)
     }
     

@@ -83,9 +83,8 @@ extension LoadingVC_CXCViewController {
                 
                 if let result = try? JSONDecoder().decode(ModsModelCodable.self, from: data) {
                     realmDB.saveModsTypes(types: result.types, contentType: type)
-                    print("🥶", result)
                 } else {
-                    print("👻")
+                    print("Error")
                 }
                 
                 completion()

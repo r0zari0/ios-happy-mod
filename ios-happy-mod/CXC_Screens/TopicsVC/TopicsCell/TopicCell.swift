@@ -12,11 +12,17 @@ class TopicCell: UICollectionViewCell {
     @IBOutlet weak var versionView: UIView!
     @IBOutlet weak var versionLabel: UILabel!
     
+    var actionClosure: (() -> Void)?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setupMyUI_CXC()
-        topicImage.image = UIImage(named: "image")
     }
+    
+    override func prepareForReuse() {
+            super.prepareForReuse()
+        topicImage.image = nil
+        }
     
     func setupMyUI_CXC() {
         topicImage.layer.cornerRadius = 14
@@ -26,7 +32,38 @@ class TopicCell: UICollectionViewCell {
         versionView.layer.cornerRadius = 8
     }
     
-    func config() {
-//        versionLabel.text = type.topicmodvariant
+    func config(topic: TopicModVariant) {
+        versionLabel.text = topic.version
+        topicImage.image = UIImage(named: topic.displayImage)
+    }
+    
+    func getImage(content: TopicModVariant, contentType: ContentType) {
+        topicImage.showActivityIndicator()
+
+        Task {
+            do {
+                let image = try await CXC_Dropbox.shared.fetchImage(contentType: contentType, imagePath: content.displayImage)
+                
+                DispatchQueue.main.async {
+                    if let image = image {
+                        self.topicImage.image = image
+                        self.topicImage.isHidden = false
+                    } else {
+                        self.topicImage.image = nil
+                    }
+                    self.topicImage.hideActivityIndicatorView()
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    self.topicImage.hideActivityIndicatorView()
+                    self.topicImage.image = nil
+                    print("🤕 Error fetching image:", error)
+                }
+            }
+        }
+    }
+    
+    @IBAction func unpackingButtonAction(_ sender: Any) {
+        actionClosure?()
     }
 }

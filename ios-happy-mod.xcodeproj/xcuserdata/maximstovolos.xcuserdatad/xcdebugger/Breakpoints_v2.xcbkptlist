@@ -3,4 +3,144 @@
    uuid = "2B435EF4-5DA7-4393-BAD3-3E2745708218"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BB32A962-224E-4360-93D9-7AE895B62190"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ios-happy-mod/CXC_Screens/TopicsVC/TopicPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "6"
+            endingLineNumber = "6"
+            landmarkName = "TopicPresenter"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AE017960-7DA4-4A0A-B53C-38B4C7552CE3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ios-happy-mod/CXC_Screens/CXC_DetailedVC/CXC_DetailedVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "192"
+            endingLineNumber = "192"
+            landmarkName = "downloadImage(imagePath:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "44D1536D-C80B-40ED-B68B-8220408E0EC5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ios-happy-mod/CXC_Screens/CXC_DetailedVC/CXC_DetailedVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
+            landmarkName = "downloadImage(imagePath:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F3273C2C-8098-418E-B0E9-FAE08747B78E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ios-happy-mod/CXC_Screens/CXC_DetailedVC/CXC_DetailedVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
+            landmarkName = "downloadImage(imagePath:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "70CB0AC4-D5E8-4206-950E-7EF07774F3AC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ios-happy-mod/CXC_Screens/CXC_DetailedVC/CXC_DetailedVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
+            landmarkName = "downloadImage(imagePath:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "70CB0AC4-D5E8-4206-950E-7EF07774F3AC - 1272f8531639ab24"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in ios_happy_mod.CXC_DetailedVC.downloadImage(imagePath: Swift.Optional&lt;__C.UIImage&gt;) -&gt; ()"
+                  moduleName = "ios-happy-mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maximstovolos/Desktop/ios-happy-mod/ios-happy-mod/CXC_Screens/CXC_DetailedVC/CXC_DetailedVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "186"
+                  endingLineNumber = "186">
+               </Location>
+               <Location
+                  uuid = "70CB0AC4-D5E8-4206-950E-7EF07774F3AC - ff1cc151dd870295"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async -&gt; () in ios_happy_mod.CXC_DetailedVC.downloadImage(imagePath: Swift.Optional&lt;__C.UIImage&gt;) -&gt; ()"
+                  moduleName = "ios-happy-mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maximstovolos/Desktop/ios-happy-mod/ios-happy-mod/CXC_Screens/CXC_DetailedVC/CXC_DetailedVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "186"
+                  endingLineNumber = "186">
+               </Location>
+               <Location
+                  uuid = "70CB0AC4-D5E8-4206-950E-7EF07774F3AC - c509ea62e4c6e822"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in ios_happy_mod.CXC_DetailedVC.downloadImage(imagePath: Swift.Optional&lt;__C.UIImage&gt;) -&gt; ()"
+                  moduleName = "ios-happy-mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maximstovolos/Desktop/ios-happy-mod/ios-happy-mod/CXC_Screens/CXC_DetailedVC/CXC_DetailedVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "186"
+                  endingLineNumber = "186">
+               </Location>
+               <Location
+                  uuid = "70CB0AC4-D5E8-4206-950E-7EF07774F3AC - eead6c8abd8047a3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async -&gt; () in ios_happy_mod.CXC_DetailedVC.downloadImage(imagePath: Swift.Optional&lt;__C.UIImage&gt;) -&gt; ()"
+                  moduleName = "ios-happy-mod"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maximstovolos/Desktop/ios-happy-mod/ios-happy-mod/CXC_Screens/CXC_DetailedVC/CXC_DetailedVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "186"
+                  endingLineNumber = "186">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

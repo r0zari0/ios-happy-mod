@@ -14,7 +14,7 @@ struct ModsModelCodable: Codable {
     }
     
     enum CodingKeysTopics: String, CodingKey {
-        case typesTopics = "mods"
+        case typesTopics = "New"
     }
     
     init(from decoder: Decoder) throws {
@@ -74,12 +74,12 @@ class TopicModVariant: Object, Codable {
     @Persisted var file: String
     
     enum CodingKeys: String, CodingKey {
-        case displayImage
-        case title
-        case discretion
-        case version
-        case weight
-        case file
+        case displayImage = "displayimage"
+        case title = "title"
+        case discretion = "discretion"
+        case version = "version"
+        case weight = "weight"
+        case file = "file"
     }
     
     required convenience init(from decoder: Decoder) throws {
