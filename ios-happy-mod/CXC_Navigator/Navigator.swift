@@ -2,9 +2,9 @@
 import Foundation
 import UIKit
 
-class CXC_Navigator {
+class Navigator {
     
-    static let shared = CXC_Navigator()
+    static let shared = Navigator()
     
     let assembler = CXC_Assembler()
     let dropBox = CXC_Dropbox.shared
